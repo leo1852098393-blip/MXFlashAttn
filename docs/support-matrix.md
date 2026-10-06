@@ -27,8 +27,9 @@ bring-up/correctness path, not a fused kernel authored by this project.
 Across the 36 C500 operator cases, MXFlashAttn's median latency is 60.52%
 lower than the project's PyTorch reference and 25.45% higher than the MetaX
 vendor raw-call median (the v0.9 matrix recorded 32.74%). The first number is
-a reference comparison; the second means that no vendor-speedup claim is made —
-no operator-level case beats the raw vendor call. Model-level vLLM tokens/s
+a reference comparison; the second reflects Python wrapper overhead — the
+MXFlashAttn API is currently slower than the raw vendor call on every
+operator-level case. Model-level vLLM tokens/s
 (eager 71.13 vs 79.48, graph 257.24–258.19 vs 274.09, both 36/36 text-identical)
 are reported in a separate section because they do not share the operator
 matrix's inputs.
