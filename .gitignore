@@ -1,0 +1,35 @@
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# 评测证据必须随仓库公开（README 直接引用 artifacts/ 下的报告），不要忽略
+# artifacts/
+# 只忽略运行期噪声
+artifacts/*.log
+artifacts/*.tmp
+
+# 凭据类文件一律不得入库
+*实例*.txt
+*实例信息*
+*credentials*
+*.pem
+*.ppk
+.env
+
+# Local submission materials (kept outside the public repository)
+/full_project_plan.md
+/seed_application.md
+/IMPLEMENTATION_PLAN.md
+/SUBMISSION_STATUS.md
+/V1.1_EVIDENCE_STATUS.md
+/MXFlashAttn_HANDOFF_COMPLETE_20261006.md
+/64G实例.txt
+
+# Compiled extension binaries are built on the target machine, never committed
+*.so
+
+/_staging_old/

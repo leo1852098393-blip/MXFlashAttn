@@ -1,0 +1,36 @@
+{
+  "schema_version": 2,
+  "kind": "vllm_mxflashattn_candidate",
+  "model": "/mnt/moark-models/Qwen3-0.6B",
+  "vllm": "0.17.0",
+  "torch": "2.8.0+metax3.5.3.9",
+  "device": "MetaX C500",
+  "max_tokens": 8,
+  "suite": false,
+  "registration": {
+    "registered": "true",
+    "backend_name": "MXFLASHATTN_V017",
+    "decoder_path": "mxflashattn_single_token_decode_vendor_prefill",
+    "encoder_path": "mxflashattn_public_api"
+  },
+  "candidate_requires_mxflashattn_decode": true,
+  "candidate_dispatch_verified": false,
+  "status": "candidate_not_verified",
+  "runs": [
+    {
+      "index": 0,
+      "prompt": "Explain paged KV cache in one sentence.",
+      "prompt_tokens": 10,
+      "generated_tokens": 8,
+      "wall_latency_ms": 406.4679848961532,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 19.681746895869022,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62460919808,
+      "dispatch_events": []
+    }
+  ],
+  "warning": "Prefill may delegate to vendor; candidate records decoder dispatch events."
+}

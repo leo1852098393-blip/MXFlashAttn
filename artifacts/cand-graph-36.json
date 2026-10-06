@@ -1,0 +1,5644 @@
+{
+  "schema_version": 2,
+  "kind": "vllm_mxflashattn_candidate",
+  "model": "/root/models/Qwen3-0.6B",
+  "vllm": "0.17.0",
+  "torch": "2.8.0+metax3.5.3.9",
+  "device": "MetaX C500",
+  "max_tokens": 16,
+  "suite": true,
+  "registration": {
+    "registered": "true",
+    "backend_name": "MXFLASHATTN_V017",
+    "backend_path": "integrations.vllm.vllm_plugin.MXFlashAttnBackend",
+    "decoder_path": "vendor_direct_with_aten_correctness_fallback",
+    "encoder_path": "mxflashattn_public_api"
+  },
+  "candidate_requires_mxflashattn_decode": true,
+  "candidate_dispatch_verified": true,
+  "status": "candidate_dispatch_verified",
+  "runs": [
+    {
+      "index": 0,
+      "prompt": "Explain paged KV cache in one sentence. Case 00.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": " O O O O O O O O O O O O O O O O",
+      "wall_latency_ms": 104.95883598923683,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 152.4407149641098,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574592000,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "prompt": "List three practical benefits of grouped-query attention. Case 01.",
+      "prompt_tokens": 14,
+      "generated_tokens": 16,
+      "generated_text": " Sub-- - - - - - - - - - - - - -",
+      "wall_latency_ms": 62.446704134345055,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 256.21848617628103,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574592000,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "prompt": "Give a concise checklist for validating an attention kernel. Case 02.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "SCIZ SCI SCI SCI SCI SCI SCI SCI SCI SCI SCI SCI SCI SCI SCI",
+      "wall_latency_ms": 62.103044241666794,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 257.63632355505564,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574592000,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "prompt": "Describe how causal masking changes autoregressive decoding. Case 03.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": " Five five five five five five five five five five five five five five five five",
+      "wall_latency_ms": 62.00215173885226,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 258.05556019072736,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574592000,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "prompt": "Explain why variable-length attention needs cumulative offsets. Case 04.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": " O O O O O O O O O O O O O O O O",
+      "wall_latency_ms": 62.22436483949423,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 257.1340027539291,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574592000,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "prompt": "Compare MQA and GQA for inference memory usage. Case 05.",
+      "prompt_tokens": 16,
+      "generated_tokens": 16,
+      "generated_text": " 05. 05. 05. 05.",
+      "wall_latency_ms": 62.289453111588955,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 256.86531508531095,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574592000,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "prompt": "Name two checks for a causal attention implementation. Case 06.",
+      "prompt_tokens": 14,
+      "generated_tokens": 16,
+      "generated_text": "                ",
+      "wall_latency_ms": 61.97924818843603,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 258.1509209559152,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574592000,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "prompt": "Explain the role of a block table in paged attention. Case 07.",
+      "prompt_tokens": 18,
+      "generated_tokens": 16,
+      "generated_text": " Case 07. ... ... ... ... ... ... ... ... ... ... ...",
+      "wall_latency_ms": 61.71320891007781,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 259.2637829498312,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574592000,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "prompt": "Give one reason BF16 may differ slightly from FP16. Case 08.",
+      "prompt_tokens": 19,
+      "generated_tokens": 16,
+      "generated_text": "                ",
+      "wall_latency_ms": 61.98071921244264,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 258.1447941118437,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "prompt": "Describe a safe fallback policy for an accelerator kernel. Case 09.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "ETNENENENENENENENENENENENENENENE",
+      "wall_latency_ms": 61.7629699409008,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 259.0548999717782,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "prompt": "Explain why a vendor baseline must be measured separately. Case 10.",
+      "prompt_tokens": 16,
+      "generated_tokens": 16,
+      "generated_text": ".\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n",
+      "wall_latency_ms": 61.995786149054766,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 258.0820567632071,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "prompt": "List the metadata needed by a decoder attention adapter. Case 11.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": " N Z Z Z Z Z Z Z Z Z Z Z Z Z Z Z",
+      "wall_latency_ms": 61.99368182569742,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 258.09081714142894,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "prompt": "Explain paged KV cache in one sentence. Case 12.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": " Z W W W W W W W W W W W W W W W",
+      "wall_latency_ms": 61.7960449308157,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 258.9162464671152,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "prompt": "List three practical benefits of grouped-query attention. Case 13.",
+      "prompt_tokens": 14,
+      "generated_tokens": 16,
+      "generated_text": "    .\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n:\n\n:\n\n:\n\n:\n\n:\n\n",
+      "wall_latency_ms": 61.783223412930965,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 258.969977870259,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "prompt": "Give a concise checklist for validating an attention kernel. Case 14.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": " Boardnenenenenenenenenenenenenenenen",
+      "wall_latency_ms": 63.406656961888075,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 252.33943511037242,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "prompt": "Describe how causal masking changes autoregressive decoding. Case 15.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": " Five.\u201d Five.\u201d Five.\u201d Five.\u201d Five.\u201d Five.\u201d Five.\u201d Five.\u201d",
+      "wall_latency_ms": 61.719669960439205,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 259.23664222857326,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "prompt": "Explain why variable-length attention needs cumulative offsets. Case 16.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": " Date DATE DATE DATE DATE DATE DATE DATE DATE DATE DATE DATE DATE DATE DATE DATE",
+      "wall_latency_ms": 61.600609216839075,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 259.7376909646903,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "prompt": "Compare MQA and GQA for inference memory usage. Case 17.",
+      "prompt_tokens": 16,
+      "generated_tokens": 16,
+      "generated_text": "  18181818181818",
+      "wall_latency_ms": 61.86126498505473,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 258.6432722296496,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "prompt": "Name two checks for a causal attention implementation. Case 18.",
+      "prompt_tokens": 14,
+      "generated_tokens": 16,
+      "generated_text": " Case 1 Alternative Alternative Alternative Alternative Alternative Alternative Alternative Alternative Alternative Alternative Alternative Alternative Alternative",
+      "wall_latency_ms": 63.93570685759187,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 250.25139763665763,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "prompt": "Explain the role of a block table in paged attention. Case 19.",
+      "prompt_tokens": 18,
+      "generated_tokens": 16,
+      "generated_text": "...\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n",
+      "wall_latency_ms": 62.15954991057515,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 257.4021212029068,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "prompt": "Give one reason BF16 may differ slightly from FP16. Case 20.",
+      "prompt_tokens": 19,
+      "generated_tokens": 16,
+      "generated_text": "        \n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+      "wall_latency_ms": 62.171557918190956,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 257.35240575849417,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "prompt": "Describe a safe fallback policy for an accelerator kernel. Case 21.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": " Defectors Kernel Kernel Kernel Kernel Kernel Kernel Kernel Kernel Kernel Kernel Kernel Kernel Kernel",
+      "wall_latency_ms": 63.43239825218916,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 252.23703408451553,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "prompt": "Explain why a vendor baseline must be measured separately. Case 22.",
+      "prompt_tokens": 16,
+      "generated_tokens": 16,
+      "generated_text": "1211111111111111",
+      "wall_latency_ms": 62.764640897512436,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 254.92060133230416,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "prompt": "List the metadata needed by a decoder attention adapter. Case 23.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": " N V V V V V V V V V V V V V V V",
+      "wall_latency_ms": 62.199847772717476,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 257.23535624178857,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "prompt": "Explain paged KV cache in one sentence. Case 24.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": " Z W W W W W W W W W W W W W W W",
+      "wall_latency_ms": 62.21924861893058,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 257.1551466009171,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "prompt": "List three practical benefits of grouped-query attention. Case 25.",
+      "prompt_tokens": 14,
+      "generated_tokens": 16,
+      "generated_text": "5555555555555555",
+      "wall_latency_ms": 62.183253932744265,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 257.304000483879,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "prompt": "Give a concise checklist for validating an attention kernel. Case 26.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "2626262626262626",
+      "wall_latency_ms": 62.035868875682354,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 257.915304322785,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "prompt": "Describe how causal masking changes autoregressive decoding. Case 27.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "                ",
+      "wall_latency_ms": 63.028177712112665,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 253.85471357083426,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "prompt": "Explain why variable-length attention needs cumulative offsets. Case 28.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": " \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\ \\",
+      "wall_latency_ms": 61.898748856037855,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 258.4866462682839,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "prompt": "Compare MQA and GQA for inference memory usage. Case 29.",
+      "prompt_tokens": 16,
+      "generated_tokens": 16,
+      "generated_text": "1111111111111111",
+      "wall_latency_ms": 61.940023209899664,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 258.3144011066947,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "prompt": "Name two checks for a causal attention implementation. Case 30.",
+      "prompt_tokens": 14,
+      "generated_tokens": 16,
+      "generated_text": " Five.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n",
+      "wall_latency_ms": 61.661808751523495,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 259.47990050818424,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "prompt": "Explain the role of a block table in paged attention. Case 31.",
+      "prompt_tokens": 18,
+      "generated_tokens": 16,
+      "generated_text": "..\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n.\n\n",
+      "wall_latency_ms": 62.04803707078099,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 257.8647247413819,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "prompt": "Give one reason BF16 may differ slightly from FP16. Case 32.",
+      "prompt_tokens": 19,
+      "generated_tokens": 16,
+      "generated_text": "                ",
+      "wall_latency_ms": 62.010623048990965,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 258.0203070586686,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "prompt": "Describe a safe fallback policy for an accelerator kernel. Case 33.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "  33.  33.  33. ",
+      "wall_latency_ms": 61.710190027952194,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 259.27646621656254,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574596096,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "prompt": "Explain why a vendor baseline must be measured separately. Case 34.",
+      "prompt_tokens": 16,
+      "generated_tokens": 16,
+      "generated_text": " Date Date Date Date Date Date Date Date Date Date Date Date Date Date Date Date",
+      "wall_latency_ms": 61.587170232087374,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 259.7943685300852,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574444544,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "prompt": "List the metadata needed by a decoder attention adapter. Case 35.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": " All\n\n*\n\n*\n\n*\n\n*\n\n*\n\n*\n\n*\n\n*\n\n*\n\n*\n\n*\n\n*\n\n*\n\n*\n\n",
+      "wall_latency_ms": 61.698506120592356,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 259.3255656583859,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62574444544,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "vendor_direct"
+        }
+      ]
+    }
+  ],
+  "warning": "Prefill may delegate to vendor; candidate records decoder dispatch events."
+}
