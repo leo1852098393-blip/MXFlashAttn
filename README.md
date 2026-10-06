@@ -22,7 +22,7 @@ MXFlashAttn 是面向 **MXMACA / MetaX C500** 的 FlashAttention 兼容前向算
 | --- | --- |
 | 算子级公平矩阵 | C500 36/36 组完成；reference、Torch SDPA、MetaX vendor、MXFlashAttn API 同输入对比 |
 | MXFlashAttn API vs PyTorch reference | 中位延迟下降 60.52% |
-| MXFlashAttn API vs MetaX vendor 裸调 | 中位延迟**上升 25.45%**（wrapper 开销，如实披露，不宣称对 vendor 加速；v0.9 矩阵实测为 +32.74%） |
+| MXFlashAttn API vs MetaX vendor 裸调 | 中位延迟**上升 25.45%**（差距来自 Python wrapper 开销；v0.9 矩阵实测为 +32.74%） |
 | 模型级 eager（Qwen3-0.6B，36 prompt 配对） | vendor 中位 79.48 tokens/s，candidate 中位 71.13 tokens/s（慢 10.5%），**36/36 文本一致** |
 | 模型级 CUDA Graph（同上，双复跑） | vendor 中位 274.09 tokens/s，candidate 中位 257.24–258.19 tokens/s（慢约 6%），**36/36 文本一致** |
 | decode dispatch 证据 | 全程 `vendor_direct`（`official-split-rc.json` 840/840 采样），prefill 委托 vendor |
@@ -31,7 +31,7 @@ MXFlashAttn 是面向 **MXMACA / MetaX C500** 的 FlashAttention 兼容前向算
 
 三条必须同时说清的口径：
 
-1. **算子级基线是同输入同设备的公平矩阵**（reference / torch SDPA / MetaX vendor / MXFlashAttn API 四路对比），不是拿自写 reference 单独对比得出的加速比。MXFlashAttn API 相对 vendor 裸调的差距是 wrapper 开销，**没有任何一组算子级用例快于 vendor 裸调**。
+1. **算子级基线是同输入同设备的公平矩阵**（reference / torch SDPA / MetaX vendor / MXFlashAttn API 四路对比），不是拿自写 reference 单独对比得出的加速比。MXFlashAttn API 相对 vendor 裸调的差距来自 Python wrapper 开销，目前所有算子级用例均慢于裸调。
 2. **仓库早期那组 384 用例 benchmark（decode 中位下降 51.64%、185/192 达标）基线是本项目 PyTorch reference**，已被公平矩阵取代，仅作为历史数据保留在 `docs/results/`，不作为当前性能主张。
 3. **模型级 vendor 与 candidate 分栏列示，不混入算子级 median**；v1.0 的 candidate 曾慢于 vendor 约 39.7%，v1.2.0 修复静默 import 回退后收敛到 eager 慢 10.5% / graph 慢约 6%，且 36 条 prompt 文本全部与 vendor 一致。CUDA Graph 相对 eager 的提升来自 vLLM 图模式本身，两边同涨，不归因于 MXFlashAttn。
 

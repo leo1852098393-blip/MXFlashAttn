@@ -20,14 +20,14 @@ MXFlashAttn provides FlashAttention-compatible forward APIs and an inference ada
 | --- | --- |
 | v0.9 fair operator matrix | 36/36 C500 cases completed; same-input comparison across reference, Torch SDPA, MetaX vendor, and MXFlashAttn API |
 | MXFlashAttn API vs reference | 60.52% median latency reduction (v0.9 C500 matrix) |
-| MXFlashAttn API vs MetaX vendor (raw) | 25.45% median latency increase (wrapper overhead, disclosed as-is; no vendor-speedup claim; the v0.9 matrix measured +32.74%) |
+| MXFlashAttn API vs MetaX vendor (raw) | 25.45% median latency increase (Python wrapper overhead; the v0.9 matrix measured +32.74%) |
 | Model-level eager (Qwen3-0.6B, 36 paired prompts) | vendor median 79.48 tokens/s, candidate median 71.13 tokens/s (10.5% slower), 36/36 text-identical |
 | Model-level CUDA Graph (same suite, double rerun) | vendor median 274.09 tokens/s, candidate median 257.24–258.19 tokens/s (about 6% slower), 36/36 text-identical |
 | Decode dispatch evidence | `vendor_direct` throughout (840/840 samples in `official-split-rc.json`); prefill delegated to vendor |
 | Maximum absolute error | 0.00390625 (v0.9 MXFlashAttn API vs reference) |
 | Automated tests | 43 passed |
 
-Operator-level numbers come from the same-input fair matrix, not end-to-end generation. No operator-level case is faster than the raw MetaX vendor call — the remaining gap is wrapper overhead. Model-level vendor and candidate results are kept in separate columns and never mixed into operator medians. The CUDA-graph-over-eager gain comes from vLLM graph mode itself (both sides scale up together) and is not attributed to MXFlashAttn. Raw data: `artifacts/official-split-fixed-36.json`, `artifacts/official-split-clean-36.json` (candidate), `artifacts/base-graph-36.json` (vendor graph baseline), `artifacts/fair-matrix-c500.json` (operator level), `artifacts/official-split-rc.json` (dispatch sampling).
+Operator-level numbers come from the same-input fair matrix, not end-to-end generation. The MXFlashAttn API is currently slower than the raw MetaX vendor call on every operator-level case; the gap is Python wrapper overhead. Model-level vendor and candidate results are kept in separate columns and never mixed into operator medians. The CUDA-graph-over-eager gain comes from vLLM graph mode itself (both sides scale up together) and is not attributed to MXFlashAttn. Raw data: `artifacts/official-split-fixed-36.json`, `artifacts/official-split-clean-36.json` (candidate), `artifacts/base-graph-36.json` (vendor graph baseline), `artifacts/fair-matrix-c500.json` (operator level), `artifacts/official-split-rc.json` (dispatch sampling).
 
 ## Capability Matrix
 
