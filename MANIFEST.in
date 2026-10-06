@@ -1,0 +1,10 @@
+include README.md
+include LICENSE
+include CONTRIBUTING.md
+include requirements-c500.txt
+include requirements-vllm.txt
+recursive-include csrc/mxmac *.cpp *.h CMakeLists.txt
+recursive-include benchmarks *.py *.yaml
+recursive-include docs *.md *.json *.png
+recursive-include integrations *.py *.md
+recursive-include tests *.py

@@ -1,0 +1,23 @@
+{
+  "case_count": 36,
+  "methods": [
+    "pytorch_reference",
+    "torch_sdpa",
+    "metax_vendor",
+    "mxflashattn_api",
+    "vllm_vendor_model",
+    "vllm_candidate_model"
+  ],
+  "operator_methods": [
+    "reference",
+    "torch_sdpa",
+    "metax_vendor",
+    "mxflashattn_api"
+  ],
+  "vllm_vendor_status": "baseline_only",
+  "vllm_candidate_status": "candidate_dispatch_verified",
+  "claims": {
+    "reference_speedup_separate": true,
+    "vendor_speedup_verified": false
+  }
+}

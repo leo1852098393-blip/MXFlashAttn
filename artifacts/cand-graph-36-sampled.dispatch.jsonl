@@ -1,0 +1,2 @@
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "vendor_direct"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "vendor_direct"}

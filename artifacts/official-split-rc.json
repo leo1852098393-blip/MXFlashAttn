@@ -1,0 +1,4703 @@
+{
+  "schema_version": 2,
+  "kind": "vllm_mxflashattn_candidate",
+  "model": "/root/models/Qwen3-0.6B",
+  "vllm": "0.17.0",
+  "torch": "2.8.0+metax3.5.3.9",
+  "device": "MetaX C500",
+  "max_tokens": 16,
+  "suite": true,
+  "registration": {
+    "registered": "true",
+    "backend_name": "MXFLASHATTN_V017",
+    "backend_path": "integrations.vllm.vllm_plugin.MXFlashAttnBackend",
+    "decoder_path": "vendor_direct_with_aten_correctness_fallback",
+    "encoder_path": "mxflashattn_public_api"
+  },
+  "candidate_requires_mxflashattn_decode": true,
+  "candidate_dispatch_verified": true,
+  "status": "candidate_dispatch_verified",
+  "runs": [
+    {
+      "index": 0,
+      "prompt": "Explain paged KV cache in one sentence. Case 00.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "01.01.01.01.01.0",
+      "wall_latency_ms": 113.0477818660438,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 141.53307332433317,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62580879360,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "prompt": "List three practical benefits of grouped-query attention. Case 01.",
+      "prompt_tokens": 14,
+      "generated_tokens": 16,
+      "generated_text": "1: Grouped Query Attention in the Context of the 2023",
+      "wall_latency_ms": 68.60657874494791,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 233.21378638456326,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62580879360,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "prompt": "Give a concise checklist for validating an attention kernel. Case 02.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "1.1.1.1.1.1.1.1.",
+      "wall_latency_ms": 68.09931294992566,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 234.95097537569893,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62580879360,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "prompt": "Describe how causal masking changes autoregressive decoding. Case 03.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "1.1.1.1.1.1.1.1.",
+      "wall_latency_ms": 67.83008622005582,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 235.88352737887516,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62580879360,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "prompt": "Explain why variable-length attention needs cumulative offsets. Case 04.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "1: A system that uses variable-length attention for the first time. The system",
+      "wall_latency_ms": 67.81003018841147,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 235.95329415934032,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62580879360,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "prompt": "Compare MQA and GQA for inference memory usage. Case 05.",
+      "prompt_tokens": 16,
+      "generated_tokens": 16,
+      "generated_text": "1: A user wants to store a file in a file system. The file",
+      "wall_latency_ms": 67.67050921916962,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 236.43977538545758,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62580879360,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "prompt": "Name two checks for a causal attention implementation. Case 06.",
+      "prompt_tokens": 14,
+      "generated_tokens": 16,
+      "generated_text": "1.1.1.1.1.1.1.1.",
+      "wall_latency_ms": 67.50390771776438,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 237.02331525600596,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62580879360,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "prompt": "Explain the role of a block table in paged attention. Case 07.",
+      "prompt_tokens": 18,
+      "generated_tokens": 16,
+      "generated_text": "1.1.1: \"The block table is a table that contains a",
+      "wall_latency_ms": 70.00038400292397,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 228.5701746912084,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62585073664,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "prompt": "Give one reason BF16 may differ slightly from FP16. Case 08.",
+      "prompt_tokens": 19,
+      "generated_tokens": 16,
+      "generated_text": "1.1.1.1.1.1.1.1.",
+      "wall_latency_ms": 67.82836467027664,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 235.88951433192122,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62585077760,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "prompt": "Describe a safe fallback policy for an accelerator kernel. Case 09.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "1.1.1.1.1.1.1.1.",
+      "wall_latency_ms": 68.40235320851207,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 233.91008129832792,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62585077760,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "prompt": "Explain why a vendor baseline must be measured separately. Case 10.",
+      "prompt_tokens": 16,
+      "generated_tokens": 16,
+      "generated_text": "1: A vendor has a vendor baseline that is not properly maintained. The vendor",
+      "wall_latency_ms": 68.32293840125203,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 234.18196544817803,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62585077760,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "prompt": "List the metadata needed by a decoder attention adapter. Case 11.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "1.1.1.1.1.1.1.1.",
+      "wall_latency_ms": 67.99057684838772,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 235.32672822703685,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62585077760,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "prompt": "Explain paged KV cache in one sentence. Case 12.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "1.1.1.1.1.1.1.1.",
+      "wall_latency_ms": 68.04857589304447,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 235.12615495654225,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62585077760,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "prompt": "List three practical benefits of grouped-query attention. Case 13.",
+      "prompt_tokens": 14,
+      "generated_tokens": 16,
+      "generated_text": "1: Grouped Query Attention in a Large Language Model\n\nIn the context of",
+      "wall_latency_ms": 69.20643104240298,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 231.19238716697808,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62585077760,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "prompt": "Give a concise checklist for validating an attention kernel. Case 14.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "1.1.1.1.1.1.1.1.",
+      "wall_latency_ms": 67.42411525920033,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 237.30381835179847,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62585077760,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "prompt": "Describe how causal masking changes autoregressive decoding. Case 15.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "1: A simple example of causal masking in a language model\n\nLet's say",
+      "wall_latency_ms": 67.48569617047906,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 237.08727786672873,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62585077760,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "prompt": "Explain why variable-length attention needs cumulative offsets. Case 16.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "1: A system that uses variable-length attention for the first time. The system",
+      "wall_latency_ms": 67.38052098080516,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 237.4573506868247,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62585077760,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "prompt": "Compare MQA and GQA for inference memory usage. Case 17.",
+      "prompt_tokens": 16,
+      "generated_tokens": 16,
+      "generated_text": "1: A user wants to store a 1000-byte file in",
+      "wall_latency_ms": 67.53362203016877,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 236.9190266864769,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62585077760,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "prompt": "Name two checks for a causal attention implementation. Case 18.",
+      "prompt_tokens": 14,
+      "generated_tokens": 16,
+      "generated_text": "1.1.1.1.1.1.1.1.",
+      "wall_latency_ms": 67.62490700930357,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 236.59921628873786,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62585077760,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "prompt": "Explain the role of a block table in paged attention. Case 19.",
+      "prompt_tokens": 18,
+      "generated_tokens": 16,
+      "generated_text": "1.1.1.1.1.1.1.1.",
+      "wall_latency_ms": 67.77490768581629,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 236.0755705366815,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62585077760,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "prompt": "Give one reason BF16 may differ slightly from FP16. Case 20.",
+      "prompt_tokens": 19,
+      "generated_tokens": 16,
+      "generated_text": "1.1.1.1.1.1.1.1.",
+      "wall_latency_ms": 67.82646803185344,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 235.89611053439933,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62585077760,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "prompt": "Describe a safe fallback policy for an accelerator kernel. Case 21.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "1.1.1.1.1.1.1.1.",
+      "wall_latency_ms": 67.62275099754333,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 236.60675976612166,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62585077760,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "prompt": "Explain why a vendor baseline must be measured separately. Case 22.",
+      "prompt_tokens": 16,
+      "generated_tokens": 16,
+      "generated_text": "1: A vendor has a vendor baseline that is not properly maintained. The vendor",
+      "wall_latency_ms": 67.4252905882895,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 237.29968177221173,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62585077760,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "prompt": "List the metadata needed by a decoder attention adapter. Case 23.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "1.1.1.1.1.1.1.1.",
+      "wall_latency_ms": 67.73392204195261,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 236.21841933337362,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62584926208,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "prompt": "Explain paged KV cache in one sentence. Case 24.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "1.1.1.1.1.1.1.1.",
+      "wall_latency_ms": 67.75184301659465,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 236.155937427135,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62584926208,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "prompt": "List three practical benefits of grouped-query attention. Case 25.",
+      "prompt_tokens": 14,
+      "generated_tokens": 16,
+      "generated_text": "1: A group of 100 students in a class of 1",
+      "wall_latency_ms": 68.61962610855699,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 233.1694430203952,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62584926208,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "prompt": "Give a concise checklist for validating an attention kernel. Case 26.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "1.1.1.1.1.1.1.1.",
+      "wall_latency_ms": 67.9969466291368,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 235.30468341859302,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62584926208,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "prompt": "Describe how causal masking changes autoregressive decoding. Case 27.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "1: A simple example of causal masking in a neural network\n\nLet's take",
+      "wall_latency_ms": 67.36911507323384,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 237.49755333148047,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62584926208,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "prompt": "Explain why variable-length attention needs cumulative offsets. Case 28.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "1: A company has a large number of employees, and the company wants to",
+      "wall_latency_ms": 67.57454806938767,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 236.77553838126593,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62584926208,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "prompt": "Compare MQA and GQA for inference memory usage. Case 29.",
+      "prompt_tokens": 16,
+      "generated_tokens": 16,
+      "generated_text": "1: A user wants to store a 1000-byte file in",
+      "wall_latency_ms": 67.78486864641309,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 236.04087932162213,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62584926208,
+      "dispatch_events": [
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        },
+        {
+          "fallback": "false",
+          "operation": "official_split_mx",
+          "path": "vendor_direct"
+        }
+      ]
+    }
+  ],
+  "warning": "Prefill may delegate to vendor; candidate records decoder dispatch events."
+}

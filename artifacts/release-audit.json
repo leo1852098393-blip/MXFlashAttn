@@ -1,0 +1,7 @@
+{
+  "required_files_missing": [],
+  "sensitive_findings": [],
+  "apache_license_present": true,
+  "pyproject_declares_apache": true,
+  "pass": true
+}

@@ -1,0 +1,9 @@
+{
+  "vllm_version": "0.17.0",
+  "registration": {
+    "registered": "true",
+    "backend_name": "MXFLASHATTN_V017",
+    "decoder_path": "delegates_to_vllm_flashattention",
+    "encoder_path": "mxflashattn_public_api"
+  }
+}
