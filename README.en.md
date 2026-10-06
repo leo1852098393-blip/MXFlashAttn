@@ -112,7 +112,9 @@ python benchmarks/fair_report.py artifacts/fair-matrix-c500.json \
 
 Each case records error, tokens/s, prefill/decode latency, peak memory, backend, fallback reason, and PyTorch/MXMACA/driver/vLLM versions. Model-level first-token latency is outside this operator benchmark and requires a separate generation experiment.
 
-![C500 benchmark summary](docs/results/c500-speedup-summary.png)
+![C500 model-level benchmark summary](docs/results/c500-model-level-summary.png)
+
+> The earlier chart `c500-speedup-summary.png` (384 cases vs the PyTorch reference) is historical data kept under `docs/results/` only; it is not a current performance claim.
 
 ## vLLM and Model Demo
 

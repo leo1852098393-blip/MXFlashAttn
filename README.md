@@ -126,7 +126,9 @@ python benchmarks/fair_report.py artifacts/fair-matrix-c500.json \
 
 每组记录误差、tokens/s、prefill/decode 延迟、峰值显存、backend、fallback 原因以及 PyTorch/MXMACA/驱动/vLLM 版本。模型级首 token 延迟不属于该算子 benchmark，需要单独的生成实验。
 
-![C500 benchmark summary](docs/results/c500-speedup-summary.png)
+![C500 model-level benchmark summary](docs/results/c500-model-level-summary.png)
+
+> 上图 `c500-speedup-summary.png`（384 用例、对比 PyTorch reference）为早期历史数据，仅保留在 `docs/results/`，不作为当前性能主张。
 
 ## vLLM 与模型演示
 
