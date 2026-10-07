@@ -1,0 +1,91 @@
+{
+  "kind": "e2e_batch_bench",
+  "model": "/root/models/Qwen3-4B",
+  "max_tokens": 256,
+  "max_model_len": 2048,
+  "registration": {
+    "registered": "true",
+    "backend_name": "MXFLASHATTN_V017",
+    "backend_path": "integrations.vllm.vllm_plugin.MXFlashAttnBackend",
+    "decoder_path": "vendor_direct_with_aten_correctness_fallback",
+    "encoder_path": "mxflashattn_public_api"
+  },
+  "results": {
+    "v7": [
+      {
+        "batch": 128,
+        "max_tokens": 256,
+        "wall_s": 23.632,
+        "gen_tokens": 32694,
+        "tokens_per_s": 1383.48,
+        "dispatch_delta": {
+          "native_decode": 9216,
+          "vendor_direct": 9216
+        }
+      },
+      {
+        "batch": 64,
+        "max_tokens": 256,
+        "wall_s": 13.287,
+        "gen_tokens": 16384,
+        "tokens_per_s": 1233.13,
+        "dispatch_delta": {
+          "native_decode": 9216,
+          "vendor_direct": 9216
+        }
+      }
+    ],
+    "m1_um": [
+      {
+        "batch": 128,
+        "max_tokens": 256,
+        "wall_s": 7.471,
+        "gen_tokens": 32693,
+        "tokens_per_s": 4375.7,
+        "dispatch_delta": {
+          "m1_split_decode": 9216,
+          "vendor_direct": 9216
+        }
+      },
+      {
+        "batch": 64,
+        "max_tokens": 256,
+        "wall_s": 6.252,
+        "gen_tokens": 16384,
+        "tokens_per_s": 2620.78,
+        "dispatch_delta": {
+          "m1_split_decode": 9216,
+          "vendor_direct": 9216
+        }
+      }
+    ],
+    "m1_um2": [
+      {
+        "batch": 128,
+        "max_tokens": 256,
+        "wall_s": 7.389,
+        "gen_tokens": 32720,
+        "tokens_per_s": 4428.35,
+        "dispatch_delta": {
+          "m1_split_decode": 9216,
+          "vendor_direct": 9216
+        }
+      },
+      {
+        "batch": 64,
+        "max_tokens": 256,
+        "wall_s": 6.239,
+        "gen_tokens": 16358,
+        "tokens_per_s": 2621.85,
+        "dispatch_delta": {
+          "m1_split_decode": 9216,
+          "vendor_direct": 9216
+        }
+      }
+    ],
+    "text_match": {
+      "m1_um": "2/4",
+      "m1_um2": "3/4"
+    }
+  }
+}

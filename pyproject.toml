@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mxflashattn"
+version = "1.2.0"
+description = "FlashAttention-compatible forward APIs and MXMACA bring-up backend"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+dependencies = [
+  "torch>=2.4",
+  "PyYAML>=6.0,<7",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.6,<1"]
+vllm = ["vllm==0.17.0"]
+reports = ["matplotlib>=3.8,<4"]
+
+[tool.setuptools.packages.find]
+include = ["mxflashattn*", "benchmarks*", "integrations*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"

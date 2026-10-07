@@ -1,0 +1,373 @@
+{
+  "schema_version": 1,
+  "kind": "vllm_same_prompt_model_matrix",
+  "case_count": 36,
+  "same_prompt": true,
+  "vendor_status": "baseline_only",
+  "candidate_status": "candidate_dispatch_verified",
+  "candidate_dispatch_verified": true,
+  "vendor_median_tokens_per_second": 76.46300725395324,
+  "candidate_median_tokens_per_second": 46.14942261876095,
+  "rows": [
+    {
+      "index": 0,
+      "prompt": "Explain paged KV cache in one sentence. Case 00.",
+      "prompt_tokens": 15,
+      "vendor_tokens_per_second": 22.927013634419822,
+      "candidate_tokens_per_second": 11.029547029425368,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "01.0",
+      "candidate_generated_text": "01.0"
+    },
+    {
+      "index": 1,
+      "prompt": "List three practical benefits of grouped-query attention. Case 01.",
+      "prompt_tokens": 14,
+      "vendor_tokens_per_second": 71.45741622989132,
+      "candidate_tokens_per_second": 43.12604381635399,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1: Grouped",
+      "candidate_generated_text": "1: Grouped"
+    },
+    {
+      "index": 2,
+      "prompt": "Give a concise checklist for validating an attention kernel. Case 02.",
+      "prompt_tokens": 15,
+      "vendor_tokens_per_second": 75.32698973527343,
+      "candidate_tokens_per_second": 44.25125093417729,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    },
+    {
+      "index": 3,
+      "prompt": "Describe how causal masking changes autoregressive decoding. Case 03.",
+      "prompt_tokens": 15,
+      "vendor_tokens_per_second": 75.28334088801715,
+      "candidate_tokens_per_second": 44.247497868647734,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    },
+    {
+      "index": 4,
+      "prompt": "Explain why variable-length attention needs cumulative offsets. Case 04.",
+      "prompt_tokens": 15,
+      "vendor_tokens_per_second": 75.70017437170029,
+      "candidate_tokens_per_second": 45.1886258994295,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1: A system",
+      "candidate_generated_text": "1: A system"
+    },
+    {
+      "index": 5,
+      "prompt": "Compare MQA and GQA for inference memory usage. Case 05.",
+      "prompt_tokens": 16,
+      "vendor_tokens_per_second": 73.4078486953416,
+      "candidate_tokens_per_second": 45.22902018811372,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1: A user",
+      "candidate_generated_text": "1: A user"
+    },
+    {
+      "index": 6,
+      "prompt": "Name two checks for a causal attention implementation. Case 06.",
+      "prompt_tokens": 14,
+      "vendor_tokens_per_second": 76.63998633852844,
+      "candidate_tokens_per_second": 46.14318115747812,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    },
+    {
+      "index": 7,
+      "prompt": "Explain the role of a block table in paged attention. Case 07.",
+      "prompt_tokens": 18,
+      "vendor_tokens_per_second": 71.34655565899732,
+      "candidate_tokens_per_second": 43.98040431252908,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    },
+    {
+      "index": 8,
+      "prompt": "Give one reason BF16 may differ slightly from FP16. Case 08.",
+      "prompt_tokens": 19,
+      "vendor_tokens_per_second": 73.20193516029995,
+      "candidate_tokens_per_second": 45.130848207808846,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    },
+    {
+      "index": 9,
+      "prompt": "Describe a safe fallback policy for an accelerator kernel. Case 09.",
+      "prompt_tokens": 15,
+      "vendor_tokens_per_second": 75.71339099000437,
+      "candidate_tokens_per_second": 46.27592539302944,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    },
+    {
+      "index": 10,
+      "prompt": "Explain why a vendor baseline must be measured separately. Case 10.",
+      "prompt_tokens": 16,
+      "vendor_tokens_per_second": 76.07687227051109,
+      "candidate_tokens_per_second": 46.371813064782884,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1: A vendor",
+      "candidate_generated_text": "1: A vendor"
+    },
+    {
+      "index": 11,
+      "prompt": "List the metadata needed by a decoder attention adapter. Case 11.",
+      "prompt_tokens": 15,
+      "vendor_tokens_per_second": 75.57054716932613,
+      "candidate_tokens_per_second": 46.48753448377129,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    },
+    {
+      "index": 12,
+      "prompt": "Explain paged KV cache in one sentence. Case 12.",
+      "prompt_tokens": 15,
+      "vendor_tokens_per_second": 76.98847432535378,
+      "candidate_tokens_per_second": 46.37832314013895,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    },
+    {
+      "index": 13,
+      "prompt": "List three practical benefits of grouped-query attention. Case 13.",
+      "prompt_tokens": 14,
+      "vendor_tokens_per_second": 76.3956906774874,
+      "candidate_tokens_per_second": 46.35362398899359,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1: Grouped",
+      "candidate_generated_text": "1: Grouped"
+    },
+    {
+      "index": 14,
+      "prompt": "Give a concise checklist for validating an attention kernel. Case 14.",
+      "prompt_tokens": 15,
+      "vendor_tokens_per_second": 76.17603562774107,
+      "candidate_tokens_per_second": 46.40730966398091,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    },
+    {
+      "index": 15,
+      "prompt": "Describe how causal masking changes autoregressive decoding. Case 15.",
+      "prompt_tokens": 15,
+      "vendor_tokens_per_second": 77.410988013786,
+      "candidate_tokens_per_second": 46.13691088073799,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1: A simple",
+      "candidate_generated_text": "1: A simple"
+    },
+    {
+      "index": 16,
+      "prompt": "Explain why variable-length attention needs cumulative offsets. Case 16.",
+      "prompt_tokens": 15,
+      "vendor_tokens_per_second": 77.46052309805171,
+      "candidate_tokens_per_second": 46.21531456125773,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1: A system",
+      "candidate_generated_text": "1: A system"
+    },
+    {
+      "index": 17,
+      "prompt": "Compare MQA and GQA for inference memory usage. Case 17.",
+      "prompt_tokens": 16,
+      "vendor_tokens_per_second": 78.1218948936385,
+      "candidate_tokens_per_second": 44.93557767345588,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1: A user",
+      "candidate_generated_text": "1: A user"
+    },
+    {
+      "index": 18,
+      "prompt": "Name two checks for a causal attention implementation. Case 18.",
+      "prompt_tokens": 14,
+      "vendor_tokens_per_second": 78.20334247454521,
+      "candidate_tokens_per_second": 46.39638300334046,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    },
+    {
+      "index": 19,
+      "prompt": "Explain the role of a block table in paged attention. Case 19.",
+      "prompt_tokens": 18,
+      "vendor_tokens_per_second": 78.34096496575403,
+      "candidate_tokens_per_second": 46.5113802762209,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    },
+    {
+      "index": 20,
+      "prompt": "Give one reason BF16 may differ slightly from FP16. Case 20.",
+      "prompt_tokens": 19,
+      "vendor_tokens_per_second": 75.0836885056303,
+      "candidate_tokens_per_second": 44.78401315131401,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    },
+    {
+      "index": 21,
+      "prompt": "Describe a safe fallback policy for an accelerator kernel. Case 21.",
+      "prompt_tokens": 15,
+      "vendor_tokens_per_second": 72.66093853879923,
+      "candidate_tokens_per_second": 44.935545704430176,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    },
+    {
+      "index": 22,
+      "prompt": "Explain why a vendor baseline must be measured separately. Case 22.",
+      "prompt_tokens": 16,
+      "vendor_tokens_per_second": 76.53032383041909,
+      "candidate_tokens_per_second": 46.27437979145492,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1: A vendor",
+      "candidate_generated_text": "1: A vendor"
+    },
+    {
+      "index": 23,
+      "prompt": "List the metadata needed by a decoder attention adapter. Case 23.",
+      "prompt_tokens": 15,
+      "vendor_tokens_per_second": 77.03489440040836,
+      "candidate_tokens_per_second": 45.24443591120043,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    },
+    {
+      "index": 24,
+      "prompt": "Explain paged KV cache in one sentence. Case 24.",
+      "prompt_tokens": 15,
+      "vendor_tokens_per_second": 73.07914713961105,
+      "candidate_tokens_per_second": 46.111032927532754,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    },
+    {
+      "index": 25,
+      "prompt": "List three practical benefits of grouped-query attention. Case 25.",
+      "prompt_tokens": 14,
+      "vendor_tokens_per_second": 76.27164957735107,
+      "candidate_tokens_per_second": 46.12275351283955,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1: A group",
+      "candidate_generated_text": "1: A group"
+    },
+    {
+      "index": 26,
+      "prompt": "Give a concise checklist for validating an attention kernel. Case 26.",
+      "prompt_tokens": 15,
+      "vendor_tokens_per_second": 72.66621365690928,
+      "candidate_tokens_per_second": 46.43251408637528,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    },
+    {
+      "index": 27,
+      "prompt": "Describe how causal masking changes autoregressive decoding. Case 27.",
+      "prompt_tokens": 15,
+      "vendor_tokens_per_second": 77.96418472344699,
+      "candidate_tokens_per_second": 46.15566408004379,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1: A simple",
+      "candidate_generated_text": "1: A simple"
+    },
+    {
+      "index": 28,
+      "prompt": "Explain why variable-length attention needs cumulative offsets. Case 28.",
+      "prompt_tokens": 15,
+      "vendor_tokens_per_second": 77.83183353842193,
+      "candidate_tokens_per_second": 46.21702232702704,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1: A company",
+      "candidate_generated_text": "1: A company"
+    },
+    {
+      "index": 29,
+      "prompt": "Compare MQA and GQA for inference memory usage. Case 29.",
+      "prompt_tokens": 16,
+      "vendor_tokens_per_second": 77.96351673538656,
+      "candidate_tokens_per_second": 46.15618812021373,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    },
+    {
+      "index": 30,
+      "prompt": "Name two checks for a causal attention implementation. Case 30.",
+      "prompt_tokens": 14,
+      "vendor_tokens_per_second": 77.02727160107963,
+      "candidate_tokens_per_second": 45.89066429117542,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    },
+    {
+      "index": 31,
+      "prompt": "Explain the role of a block table in paged attention. Case 31.",
+      "prompt_tokens": 18,
+      "vendor_tokens_per_second": 78.17641797948988,
+      "candidate_tokens_per_second": 46.17839102025051,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    },
+    {
+      "index": 32,
+      "prompt": "Give one reason BF16 may differ slightly from FP16. Case 32.",
+      "prompt_tokens": 19,
+      "vendor_tokens_per_second": 78.40157871862296,
+      "candidate_tokens_per_second": 46.17930459512578,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    },
+    {
+      "index": 33,
+      "prompt": "Describe a safe fallback policy for an accelerator kernel. Case 33.",
+      "prompt_tokens": 15,
+      "vendor_tokens_per_second": 77.89889705385579,
+      "candidate_tokens_per_second": 46.26702439230642,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    },
+    {
+      "index": 34,
+      "prompt": "Explain why a vendor baseline must be measured separately. Case 34.",
+      "prompt_tokens": 16,
+      "vendor_tokens_per_second": 78.40012754401452,
+      "candidate_tokens_per_second": 46.31292173621122,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1:",
+      "candidate_generated_text": "1.1:"
+    },
+    {
+      "index": 35,
+      "prompt": "List the metadata needed by a decoder attention adapter. Case 35.",
+      "prompt_tokens": 15,
+      "vendor_tokens_per_second": 77.79095366730087,
+      "candidate_tokens_per_second": 46.033216975587,
+      "candidate_dispatch_verified": true,
+      "vendor_generated_text": "1.1.",
+      "candidate_generated_text": "1.1."
+    }
+  ]
+}

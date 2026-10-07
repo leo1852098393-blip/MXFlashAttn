@@ -1,0 +1,738 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "device": "cpu",
+    "torch": "2.8.0+cpu",
+    "vllm": null,
+    "flash_attn": null,
+    "vllm_metax": null,
+    "mxmaca": "unknown",
+    "driver": "unknown",
+    "seed": 20261005,
+    "repeats": 1,
+    "case_count": 36,
+    "vendor_error": "ModuleNotFoundError: No module named 'flash_attn'"
+  },
+  "cases": [
+    {
+      "case_id": "case-00",
+      "batch_size": 1,
+      "q_len": 1,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-01",
+      "batch_size": 2,
+      "q_len": 1,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-02",
+      "batch_size": 1,
+      "q_len": 8,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "paged",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-03",
+      "batch_size": 2,
+      "q_len": 8,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-04",
+      "batch_size": 1,
+      "q_len": 1,
+      "kv_len": 128,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-05",
+      "batch_size": 2,
+      "q_len": 1,
+      "kv_len": 128,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "paged",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-06",
+      "batch_size": 1,
+      "q_len": 8,
+      "kv_len": 128,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-07",
+      "batch_size": 2,
+      "q_len": 8,
+      "kv_len": 128,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-08",
+      "batch_size": 1,
+      "q_len": 1,
+      "kv_len": 64,
+      "head_dim": 128,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "paged",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-09",
+      "batch_size": 2,
+      "q_len": 1,
+      "kv_len": 64,
+      "head_dim": 128,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-10",
+      "batch_size": 1,
+      "q_len": 8,
+      "kv_len": 64,
+      "head_dim": 128,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-11",
+      "batch_size": 2,
+      "q_len": 8,
+      "kv_len": 64,
+      "head_dim": 128,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "paged",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-12",
+      "batch_size": 1,
+      "q_len": 1,
+      "kv_len": 128,
+      "head_dim": 128,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-13",
+      "batch_size": 2,
+      "q_len": 1,
+      "kv_len": 128,
+      "head_dim": 128,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-14",
+      "batch_size": 1,
+      "q_len": 8,
+      "kv_len": 128,
+      "head_dim": 128,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "paged",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-15",
+      "batch_size": 2,
+      "q_len": 8,
+      "kv_len": 128,
+      "head_dim": 128,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-16",
+      "batch_size": 1,
+      "q_len": 1,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-17",
+      "batch_size": 2,
+      "q_len": 1,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "paged",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-18",
+      "batch_size": 1,
+      "q_len": 8,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-19",
+      "batch_size": 2,
+      "q_len": 8,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-20",
+      "batch_size": 1,
+      "q_len": 1,
+      "kv_len": 128,
+      "head_dim": 64,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "paged",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-21",
+      "batch_size": 2,
+      "q_len": 1,
+      "kv_len": 128,
+      "head_dim": 64,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-22",
+      "batch_size": 1,
+      "q_len": 8,
+      "kv_len": 128,
+      "head_dim": 64,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-23",
+      "batch_size": 2,
+      "q_len": 8,
+      "kv_len": 128,
+      "head_dim": 64,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "paged",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-24",
+      "batch_size": 1,
+      "q_len": 1,
+      "kv_len": 64,
+      "head_dim": 128,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-25",
+      "batch_size": 2,
+      "q_len": 1,
+      "kv_len": 64,
+      "head_dim": 128,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-26",
+      "batch_size": 1,
+      "q_len": 8,
+      "kv_len": 64,
+      "head_dim": 128,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "paged",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-27",
+      "batch_size": 2,
+      "q_len": 8,
+      "kv_len": 64,
+      "head_dim": 128,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-28",
+      "batch_size": 1,
+      "q_len": 1,
+      "kv_len": 128,
+      "head_dim": 128,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-29",
+      "batch_size": 2,
+      "q_len": 1,
+      "kv_len": 128,
+      "head_dim": 128,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "paged",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-30",
+      "batch_size": 1,
+      "q_len": 8,
+      "kv_len": 128,
+      "head_dim": 128,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-31",
+      "batch_size": 2,
+      "q_len": 8,
+      "kv_len": 128,
+      "head_dim": 128,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-32",
+      "batch_size": 1,
+      "q_len": 1,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "bfloat16",
+      "causal": true,
+      "layout": "paged",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-33",
+      "batch_size": 2,
+      "q_len": 1,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "bfloat16",
+      "causal": false,
+      "layout": "dense",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-34",
+      "batch_size": 1,
+      "q_len": 8,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "bfloat16",
+      "causal": true,
+      "layout": "varlen",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    },
+    {
+      "case_id": "case-35",
+      "batch_size": 2,
+      "q_len": 8,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "bfloat16",
+      "causal": true,
+      "layout": "paged",
+      "errors": {
+        "metax_vendor": "ModuleNotFoundError: No module named 'flash_attn'"
+      },
+      "timings_ms": {
+        "reference": null,
+        "torch_sdpa": null,
+        "mxflashattn_api": null,
+        "metax_vendor": null
+      }
+    }
+  ]
+}

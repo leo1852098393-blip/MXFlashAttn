@@ -1,0 +1,58 @@
+{
+  "kind": "e2e_batch_bench",
+  "model": "/mnt/moark-models/PaddleOCR-VL",
+  "max_tokens": 64,
+  "max_model_len": 2048,
+  "registration": {
+    "registered": "true",
+    "backend_name": "MXFLASHATTN_V017",
+    "backend_path": "integrations.vllm.vllm_plugin.MXFlashAttnBackend",
+    "decoder_path": "vendor_direct_with_aten_correctness_fallback",
+    "encoder_path": "mxflashattn_public_api"
+  },
+  "results": {
+    "v7": [
+      {
+        "batch": 16,
+        "max_tokens": 64,
+        "wall_s": 0.899,
+        "gen_tokens": 268,
+        "tokens_per_s": 298.01,
+        "dispatch_delta": {
+          "vendor_direct": 1152,
+          "native_decode": 1134
+        }
+      }
+    ],
+    "m1_um": [
+      {
+        "batch": 16,
+        "max_tokens": 64,
+        "wall_s": 0.938,
+        "gen_tokens": 331,
+        "tokens_per_s": 352.73,
+        "dispatch_delta": {
+          "vendor_direct": 1152,
+          "m1_split_decode": 1134
+        }
+      }
+    ],
+    "m1_um2": [
+      {
+        "batch": 16,
+        "max_tokens": 64,
+        "wall_s": 0.929,
+        "gen_tokens": 331,
+        "tokens_per_s": 356.28,
+        "dispatch_delta": {
+          "vendor_direct": 1152,
+          "m1_split_decode": 1134
+        }
+      }
+    ],
+    "text_match": {
+      "m1_um": "4/4",
+      "m1_um2": "4/4"
+    }
+  }
+}

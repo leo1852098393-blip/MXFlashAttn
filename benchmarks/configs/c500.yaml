@@ -1,0 +1,10 @@
+seed: 20261005
+matrix:
+  batch_size: [1, 2]
+  q_len: [1, 64]
+  kv_len: [128, 512]
+  head_dim: [64, 128]
+  gqa_ratio: [1, 4]
+  layout: [dense, varlen, paged]
+  dtype: [float16, bfloat16]
+  causal: [true, false]

@@ -1,0 +1,3 @@
+# Optional upstream baseline only. Confirm that the MXMACA vendor build supports this exact
+# release before installing it on C500.
+vllm==0.17.0

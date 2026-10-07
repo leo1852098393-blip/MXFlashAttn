@@ -1,0 +1,90 @@
+{
+  "kind": "e2e_batch_bench",
+  "model": "/mnt/moark-models/Qwen3-0.6B",
+  "max_tokens": 256,
+  "registration": {
+    "registered": "true",
+    "backend_name": "MXFLASHATTN_V017",
+    "backend_path": "integrations.vllm.vllm_plugin.MXFlashAttnBackend",
+    "decoder_path": "vendor_direct_with_aten_correctness_fallback",
+    "encoder_path": "mxflashattn_public_api"
+  },
+  "results": {
+    "v7": [
+      {
+        "batch": 128,
+        "max_tokens": 256,
+        "wall_s": 7.427,
+        "gen_tokens": 32768,
+        "tokens_per_s": 4411.91,
+        "dispatch_delta": {
+          "native_decode": 7168,
+          "vendor_direct": 7168
+        }
+      },
+      {
+        "batch": 64,
+        "max_tokens": 256,
+        "wall_s": 5.15,
+        "gen_tokens": 16384,
+        "tokens_per_s": 3181.08,
+        "dispatch_delta": {
+          "native_decode": 7168,
+          "vendor_direct": 7168
+        }
+      }
+    ],
+    "m1_um": [
+      {
+        "batch": 128,
+        "max_tokens": 256,
+        "wall_s": 5.684,
+        "gen_tokens": 32768,
+        "tokens_per_s": 5765.04,
+        "dispatch_delta": {
+          "m1_split_decode": 7168,
+          "vendor_direct": 7168
+        }
+      },
+      {
+        "batch": 64,
+        "max_tokens": 256,
+        "wall_s": 5.094,
+        "gen_tokens": 16384,
+        "tokens_per_s": 3216.25,
+        "dispatch_delta": {
+          "m1_split_decode": 7168,
+          "vendor_direct": 7168
+        }
+      }
+    ],
+    "m1_um2": [
+      {
+        "batch": 128,
+        "max_tokens": 256,
+        "wall_s": 5.623,
+        "gen_tokens": 32768,
+        "tokens_per_s": 5827.76,
+        "dispatch_delta": {
+          "m1_split_decode": 7168,
+          "vendor_direct": 7168
+        }
+      },
+      {
+        "batch": 64,
+        "max_tokens": 256,
+        "wall_s": 5.049,
+        "gen_tokens": 16384,
+        "tokens_per_s": 3244.78,
+        "dispatch_delta": {
+          "m1_split_decode": 7168,
+          "vendor_direct": 7168
+        }
+      }
+    ],
+    "text_match": {
+      "m1_um": "3/4",
+      "m1_um2": "3/4"
+    }
+  }
+}

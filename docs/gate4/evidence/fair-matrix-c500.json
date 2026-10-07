@@ -1,0 +1,1314 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "device": "cuda",
+    "torch": "2.8.0+metax3.5.3.9",
+    "vllm": "0.17.0",
+    "flash_attn": "2.6.3+metax3.5.3.9torch2.8",
+    "vllm_metax": "0.17.0+gd10261.d20260409.maca3.5.3.20.torch2.8",
+    "mxmaca": "unknown",
+    "driver": "unknown",
+    "seed": 20261005,
+    "repeats": 5,
+    "case_count": 36,
+    "vendor_error": null
+  },
+  "cases": [
+    {
+      "case_id": "case-00",
+      "batch_size": 1,
+      "q_len": 1,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "timings_ms": {
+        "reference": 0.23469235748052597,
+        "torch_sdpa": 0.14831498265266418,
+        "mxflashattn_api": 0.12094900012016296,
+        "metax_vendor": 0.09474018588662148
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.026894865557551384
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.026894865557551384
+        },
+        "metax_vendor": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.026894865557551384
+        }
+      },
+      "tokens": 1
+    },
+    {
+      "case_id": "case-01",
+      "batch_size": 2,
+      "q_len": 1,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "timings_ms": {
+        "reference": 0.5363891832530499,
+        "torch_sdpa": 0.13939663767814636,
+        "mxflashattn_api": 0.2180696465075016,
+        "metax_vendor": 0.12792740017175674
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.024779735133051872
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.05815347656607628
+        },
+        "metax_vendor": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.05815347656607628
+        }
+      },
+      "tokens": 2
+    },
+    {
+      "case_id": "case-02",
+      "batch_size": 1,
+      "q_len": 8,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "paged",
+      "timings_ms": {
+        "reference": 0.29434124007821083,
+        "torch_sdpa": 0.15693018212914467,
+        "mxflashattn_api": 0.1327870413661003,
+        "metax_vendor": 0.06754696369171143
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.5526992082595825
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.5526992082595825
+        },
+        "metax_vendor": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.5526992082595825
+        }
+      },
+      "tokens": 8
+    },
+    {
+      "case_id": "case-03",
+      "batch_size": 2,
+      "q_len": 8,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "timings_ms": {
+        "reference": 0.37127966061234474,
+        "torch_sdpa": 0.15051430091261864,
+        "mxflashattn_api": 0.1272689551115036,
+        "metax_vendor": 0.10987510904669762
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.00048828125,
+          "max_rel": 1.4310897588729858
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.00048828125,
+          "max_rel": 1.4310897588729858
+        },
+        "metax_vendor": {
+          "max_abs": 0.00048828125,
+          "max_rel": 1.4310897588729858
+        }
+      },
+      "tokens": 16
+    },
+    {
+      "case_id": "case-04",
+      "batch_size": 1,
+      "q_len": 1,
+      "kv_len": 128,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "timings_ms": {
+        "reference": 0.30989665538072586,
+        "torch_sdpa": 0.14215288683772087,
+        "mxflashattn_api": 0.21309265866875648,
+        "metax_vendor": 0.1252889633178711
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.0001220703125,
+          "max_rel": 0.44174349308013916
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.016764460131525993
+        },
+        "metax_vendor": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.016764460131525993
+        }
+      },
+      "tokens": 1
+    },
+    {
+      "case_id": "case-05",
+      "batch_size": 2,
+      "q_len": 1,
+      "kv_len": 128,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "paged",
+      "timings_ms": {
+        "reference": 0.5213730037212372,
+        "torch_sdpa": 0.13943668454885483,
+        "mxflashattn_api": 0.1274431124329567,
+        "metax_vendor": 0.05495129153132439
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.0001220703125,
+          "max_rel": 0.1936962753534317
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.0001220703125,
+          "max_rel": 0.1936962753534317
+        },
+        "metax_vendor": {
+          "max_abs": 0.0001220703125,
+          "max_rel": 0.1936962753534317
+        }
+      },
+      "tokens": 2
+    },
+    {
+      "case_id": "case-06",
+      "batch_size": 1,
+      "q_len": 8,
+      "kv_len": 128,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "timings_ms": {
+        "reference": 0.21287333220243454,
+        "torch_sdpa": 0.15048589557409286,
+        "mxflashattn_api": 0.12707337737083435,
+        "metax_vendor": 0.10608509182929993
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.0001220703125,
+          "max_rel": 0.015219337306916714
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.0001220703125,
+          "max_rel": 0.015219337306916714
+        },
+        "metax_vendor": {
+          "max_abs": 0.0001220703125,
+          "max_rel": 0.015219337306916714
+        }
+      },
+      "tokens": 8
+    },
+    {
+      "case_id": "case-07",
+      "batch_size": 2,
+      "q_len": 8,
+      "kv_len": 128,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "timings_ms": {
+        "reference": 0.5220738239586353,
+        "torch_sdpa": 0.15294784680008888,
+        "mxflashattn_api": 0.21593505516648293,
+        "metax_vendor": 0.13192789629101753
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.6372712254524231
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.00048828125,
+          "max_rel": 1.3333333730697632
+        },
+        "metax_vendor": {
+          "max_abs": 0.00048828125,
+          "max_rel": 1.3333333730697632
+        }
+      },
+      "tokens": 16
+    },
+    {
+      "case_id": "case-08",
+      "batch_size": 1,
+      "q_len": 1,
+      "kv_len": 64,
+      "head_dim": 128,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "paged",
+      "timings_ms": {
+        "reference": 0.32116007059812546,
+        "torch_sdpa": 0.13950467109680176,
+        "mxflashattn_api": 0.1253737136721611,
+        "metax_vendor": 0.0545009970664978
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.01711711660027504
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.01711711660027504
+        },
+        "metax_vendor": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.01711711660027504
+        }
+      },
+      "tokens": 1
+    },
+    {
+      "case_id": "case-09",
+      "batch_size": 2,
+      "q_len": 1,
+      "kv_len": 64,
+      "head_dim": 128,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "timings_ms": {
+        "reference": 0.3706878051161766,
+        "torch_sdpa": 0.13402709737420082,
+        "mxflashattn_api": 0.11624488979578018,
+        "metax_vendor": 0.09409617632627487
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.7791164517402649
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.7791164517402649
+        },
+        "metax_vendor": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.7791164517402649
+        }
+      },
+      "tokens": 2
+    },
+    {
+      "case_id": "case-10",
+      "batch_size": 1,
+      "q_len": 8,
+      "kv_len": 64,
+      "head_dim": 128,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "timings_ms": {
+        "reference": 0.2886890433728695,
+        "torch_sdpa": 0.15305960550904274,
+        "mxflashattn_api": 0.23064902052283287,
+        "metax_vendor": 0.14082668349146843
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.36239317059516907
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.752136766910553
+        },
+        "metax_vendor": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.752136766910553
+        }
+      },
+      "tokens": 8
+    },
+    {
+      "case_id": "case-11",
+      "batch_size": 2,
+      "q_len": 8,
+      "kv_len": 64,
+      "head_dim": 128,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "paged",
+      "timings_ms": {
+        "reference": 0.5137086845934391,
+        "torch_sdpa": 0.15122070908546448,
+        "mxflashattn_api": 0.13816310092806816,
+        "metax_vendor": 0.06585102528333664
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.12195122241973877
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.12195122241973877
+        },
+        "metax_vendor": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.12195122241973877
+        }
+      },
+      "tokens": 16
+    },
+    {
+      "case_id": "case-12",
+      "batch_size": 1,
+      "q_len": 1,
+      "kv_len": 128,
+      "head_dim": 128,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "timings_ms": {
+        "reference": 0.2414276823401451,
+        "torch_sdpa": 0.14106836169958115,
+        "mxflashattn_api": 0.11727819219231606,
+        "metax_vendor": 0.0964868813753128
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.0001220703125,
+          "max_rel": 0.05186089128255844
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.0001220703125,
+          "max_rel": 0.05186089128255844
+        },
+        "metax_vendor": {
+          "max_abs": 0.0001220703125,
+          "max_rel": 0.05186089128255844
+        }
+      },
+      "tokens": 1
+    },
+    {
+      "case_id": "case-13",
+      "batch_size": 2,
+      "q_len": 1,
+      "kv_len": 128,
+      "head_dim": 128,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "timings_ms": {
+        "reference": 0.5140569992363453,
+        "torch_sdpa": 0.13410579413175583,
+        "mxflashattn_api": 0.20814966410398483,
+        "metax_vendor": 0.11808797717094421
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.0001220703125,
+          "max_rel": 0.06940371543169022
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.032746821641922
+        },
+        "metax_vendor": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.032746821641922
+        }
+      },
+      "tokens": 2
+    },
+    {
+      "case_id": "case-14",
+      "batch_size": 1,
+      "q_len": 8,
+      "kv_len": 128,
+      "head_dim": 128,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "paged",
+      "timings_ms": {
+        "reference": 0.29258430004119873,
+        "torch_sdpa": 0.14866096898913383,
+        "mxflashattn_api": 0.13448763638734818,
+        "metax_vendor": 0.06788922473788261
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.23062261939048767
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.23062261939048767
+        },
+        "metax_vendor": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.23062261939048767
+        }
+      },
+      "tokens": 8
+    },
+    {
+      "case_id": "case-15",
+      "batch_size": 2,
+      "q_len": 8,
+      "kv_len": 128,
+      "head_dim": 128,
+      "gqa_ratio": 1,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "timings_ms": {
+        "reference": 0.36708731204271317,
+        "torch_sdpa": 0.15203282237052917,
+        "mxflashattn_api": 0.12842891737818718,
+        "metax_vendor": 0.10738475248217583
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.41613587737083435
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.41613587737083435
+        },
+        "metax_vendor": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.41613587737083435
+        }
+      },
+      "tokens": 16
+    },
+    {
+      "case_id": "case-16",
+      "batch_size": 1,
+      "q_len": 1,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "timings_ms": {
+        "reference": 0.32318662852048874,
+        "torch_sdpa": 0.14300504699349403,
+        "mxflashattn_api": 0.207382719963789,
+        "metax_vendor": 0.1278109848499298
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.02705061063170433
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.02615518681704998
+        },
+        "metax_vendor": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.02615518681704998
+        }
+      },
+      "tokens": 1
+    },
+    {
+      "case_id": "case-17",
+      "batch_size": 2,
+      "q_len": 1,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "paged",
+      "timings_ms": {
+        "reference": 0.5062520503997803,
+        "torch_sdpa": 0.13602618128061295,
+        "mxflashattn_api": 0.13104593381285667,
+        "metax_vendor": 0.059382058680057526
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.08225107938051224
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.08225107938051224
+        },
+        "metax_vendor": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.08225107938051224
+        }
+      },
+      "tokens": 2
+    },
+    {
+      "case_id": "case-18",
+      "batch_size": 1,
+      "q_len": 8,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "timings_ms": {
+        "reference": 0.21411944180727005,
+        "torch_sdpa": 0.14794804155826569,
+        "mxflashattn_api": 0.1274971291422844,
+        "metax_vendor": 0.10719429701566696
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.23244552314281464
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.23244552314281464
+        },
+        "metax_vendor": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.23244552314281464
+        }
+      },
+      "tokens": 8
+    },
+    {
+      "case_id": "case-19",
+      "batch_size": 2,
+      "q_len": 8,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "timings_ms": {
+        "reference": 0.5179331637918949,
+        "torch_sdpa": 0.14634616672992706,
+        "mxflashattn_api": 0.21999981254339218,
+        "metax_vendor": 0.13200519606471062
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.22386759519577026
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.19686411321163177
+        },
+        "metax_vendor": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.19686411321163177
+        }
+      },
+      "tokens": 16
+    },
+    {
+      "case_id": "case-20",
+      "batch_size": 1,
+      "q_len": 1,
+      "kv_len": 128,
+      "head_dim": 64,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "paged",
+      "timings_ms": {
+        "reference": 0.3107041120529175,
+        "torch_sdpa": 0.13499800115823746,
+        "mxflashattn_api": 0.12688897550106049,
+        "metax_vendor": 0.058764126151800156
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.14804844558238983
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.14804844558238983
+        },
+        "metax_vendor": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.14804844558238983
+        }
+      },
+      "tokens": 1
+    },
+    {
+      "case_id": "case-21",
+      "batch_size": 2,
+      "q_len": 1,
+      "kv_len": 128,
+      "head_dim": 64,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "timings_ms": {
+        "reference": 0.3675399348139763,
+        "torch_sdpa": 0.1335148699581623,
+        "mxflashattn_api": 0.15174271538853645,
+        "metax_vendor": 0.1276060938835144
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.03242446482181549
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.03242446482181549
+        },
+        "metax_vendor": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.03242446482181549
+        }
+      },
+      "tokens": 2
+    },
+    {
+      "case_id": "case-22",
+      "batch_size": 1,
+      "q_len": 8,
+      "kv_len": 128,
+      "head_dim": 64,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "timings_ms": {
+        "reference": 0.28804177418351173,
+        "torch_sdpa": 0.14810962602496147,
+        "mxflashattn_api": 0.21748710423707962,
+        "metax_vendor": 0.13314280658960342
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.000244140625,
+          "max_rel": 2.367347002029419
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.000244140625,
+          "max_rel": 1.0
+        },
+        "metax_vendor": {
+          "max_abs": 0.000244140625,
+          "max_rel": 1.0
+        }
+      },
+      "tokens": 8
+    },
+    {
+      "case_id": "case-23",
+      "batch_size": 2,
+      "q_len": 8,
+      "kv_len": 128,
+      "head_dim": 64,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "paged",
+      "timings_ms": {
+        "reference": 0.5082483403384686,
+        "torch_sdpa": 0.15223585069179535,
+        "mxflashattn_api": 0.13839779421687126,
+        "metax_vendor": 0.0688210129737854
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.000244140625,
+          "max_rel": 3.076923131942749
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.000244140625,
+          "max_rel": 3.076923131942749
+        },
+        "metax_vendor": {
+          "max_abs": 0.000244140625,
+          "max_rel": 3.076923131942749
+        }
+      },
+      "tokens": 16
+    },
+    {
+      "case_id": "case-24",
+      "batch_size": 1,
+      "q_len": 1,
+      "kv_len": 64,
+      "head_dim": 128,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "timings_ms": {
+        "reference": 0.21674390882253647,
+        "torch_sdpa": 0.13638800010085106,
+        "mxflashattn_api": 0.14887703582644463,
+        "metax_vendor": 0.12838700786232948
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.4000000059604645
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.4000000059604645
+        },
+        "metax_vendor": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.4000000059604645
+        }
+      },
+      "tokens": 1
+    },
+    {
+      "case_id": "case-25",
+      "batch_size": 2,
+      "q_len": 1,
+      "kv_len": 64,
+      "head_dim": 128,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "timings_ms": {
+        "reference": 0.5121380090713501,
+        "torch_sdpa": 0.14023855328559875,
+        "mxflashattn_api": 0.2050609327852726,
+        "metax_vendor": 0.12003723531961441
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.08624030649662018
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.08914728462696075
+        },
+        "metax_vendor": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.08914728462696075
+        }
+      },
+      "tokens": 2
+    },
+    {
+      "case_id": "case-26",
+      "batch_size": 1,
+      "q_len": 8,
+      "kv_len": 64,
+      "head_dim": 128,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "paged",
+      "timings_ms": {
+        "reference": 0.30478881672024727,
+        "torch_sdpa": 0.14768214896321297,
+        "mxflashattn_api": 0.13317400589585304,
+        "metax_vendor": 0.0666249543428421
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.9148418307304382
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.9148418307304382
+        },
+        "metax_vendor": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.9148418307304382
+        }
+      },
+      "tokens": 8
+    },
+    {
+      "case_id": "case-27",
+      "batch_size": 2,
+      "q_len": 8,
+      "kv_len": 64,
+      "head_dim": 128,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "timings_ms": {
+        "reference": 0.3682202659547329,
+        "torch_sdpa": 0.14832103624939919,
+        "mxflashattn_api": 0.12681307271122932,
+        "metax_vendor": 0.10879058390855789
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.00048828125,
+          "max_rel": 1.6525423526763916
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.00048828125,
+          "max_rel": 1.6525423526763916
+        },
+        "metax_vendor": {
+          "max_abs": 0.00048828125,
+          "max_rel": 1.6525423526763916
+        }
+      },
+      "tokens": 16
+    },
+    {
+      "case_id": "case-28",
+      "batch_size": 1,
+      "q_len": 1,
+      "kv_len": 128,
+      "head_dim": 128,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "timings_ms": {
+        "reference": 0.3128848038613796,
+        "torch_sdpa": 0.13697613030672073,
+        "mxflashattn_api": 0.21833693608641624,
+        "metax_vendor": 0.12200884521007538
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.1586931198835373
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.21120186150074005
+        },
+        "metax_vendor": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.21120186150074005
+        }
+      },
+      "tokens": 1
+    },
+    {
+      "case_id": "case-29",
+      "batch_size": 2,
+      "q_len": 1,
+      "kv_len": 128,
+      "head_dim": 128,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "paged",
+      "timings_ms": {
+        "reference": 0.5129072815179825,
+        "torch_sdpa": 0.13734307140111923,
+        "mxflashattn_api": 0.13076281175017357,
+        "metax_vendor": 0.05805492401123047
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.26878130435943604
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.26878130435943604
+        },
+        "metax_vendor": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.26878130435943604
+        }
+      },
+      "tokens": 2
+    },
+    {
+      "case_id": "case-30",
+      "batch_size": 1,
+      "q_len": 8,
+      "kv_len": 128,
+      "head_dim": 128,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": false,
+      "layout": "dense",
+      "timings_ms": {
+        "reference": 0.21152198314666748,
+        "torch_sdpa": 0.14630937948822975,
+        "mxflashattn_api": 0.12688711285591125,
+        "metax_vendor": 0.10616378858685493
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.659744381904602
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.659744381904602
+        },
+        "metax_vendor": {
+          "max_abs": 0.000244140625,
+          "max_rel": 0.659744381904602
+        }
+      },
+      "tokens": 8
+    },
+    {
+      "case_id": "case-31",
+      "batch_size": 2,
+      "q_len": 8,
+      "kv_len": 128,
+      "head_dim": 128,
+      "gqa_ratio": 4,
+      "dtype": "float16",
+      "causal": true,
+      "layout": "varlen",
+      "timings_ms": {
+        "reference": 0.5133370868861675,
+        "torch_sdpa": 0.15535997226834297,
+        "mxflashattn_api": 0.21154619753360748,
+        "metax_vendor": 0.1286291517317295
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.00048828125,
+          "max_rel": 0.49603623151779175
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.00048828125,
+          "max_rel": 3.219780206680298
+        },
+        "metax_vendor": {
+          "max_abs": 0.00048828125,
+          "max_rel": 3.219780206680298
+        }
+      },
+      "tokens": 16
+    },
+    {
+      "case_id": "case-32",
+      "batch_size": 1,
+      "q_len": 1,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "bfloat16",
+      "causal": true,
+      "layout": "paged",
+      "timings_ms": {
+        "reference": 0.28994539752602577,
+        "torch_sdpa": 0.1364932395517826,
+        "mxflashattn_api": 0.11810380965471268,
+        "metax_vendor": 0.05455967038869858
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.001953125,
+          "max_rel": 0.35849055647850037
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.001953125,
+          "max_rel": 0.35849055647850037
+        },
+        "metax_vendor": {
+          "max_abs": 0.001953125,
+          "max_rel": 0.35849055647850037
+        }
+      },
+      "tokens": 1
+    },
+    {
+      "case_id": "case-33",
+      "batch_size": 2,
+      "q_len": 1,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "bfloat16",
+      "causal": false,
+      "layout": "dense",
+      "timings_ms": {
+        "reference": 0.36299601197242737,
+        "torch_sdpa": 0.13545015826821327,
+        "mxflashattn_api": 0.11464161798357964,
+        "metax_vendor": 0.09439419955015182
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.001953125,
+          "max_rel": 0.0833333358168602
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.001953125,
+          "max_rel": 0.0833333358168602
+        },
+        "metax_vendor": {
+          "max_abs": 0.001953125,
+          "max_rel": 0.0833333358168602
+        }
+      },
+      "tokens": 2
+    },
+    {
+      "case_id": "case-34",
+      "batch_size": 1,
+      "q_len": 8,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "bfloat16",
+      "causal": true,
+      "layout": "varlen",
+      "timings_ms": {
+        "reference": 0.29230909422039986,
+        "torch_sdpa": 0.15080813318490982,
+        "mxflashattn_api": 0.22068573161959648,
+        "metax_vendor": 0.14053424820303917
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.00390625,
+          "max_rel": 0.3779761791229248
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.001953125,
+          "max_rel": 0.788690447807312
+        },
+        "metax_vendor": {
+          "max_abs": 0.001953125,
+          "max_rel": 0.788690447807312
+        }
+      },
+      "tokens": 8
+    },
+    {
+      "case_id": "case-35",
+      "batch_size": 2,
+      "q_len": 8,
+      "kv_len": 64,
+      "head_dim": 64,
+      "gqa_ratio": 1,
+      "dtype": "bfloat16",
+      "causal": true,
+      "layout": "paged",
+      "timings_ms": {
+        "reference": 0.5161319859325886,
+        "torch_sdpa": 0.15203189104795456,
+        "mxflashattn_api": 0.1378161832690239,
+        "metax_vendor": 0.0672023743391037
+      },
+      "errors_vs_reference": {
+        "reference": {
+          "max_abs": 0.0,
+          "max_rel": 0.0
+        },
+        "torch_sdpa": {
+          "max_abs": 0.00390625,
+          "max_rel": 0.6000000238418579
+        },
+        "mxflashattn_api": {
+          "max_abs": 0.00390625,
+          "max_rel": 0.6000000238418579
+        },
+        "metax_vendor": {
+          "max_abs": 0.00390625,
+          "max_rel": 0.6000000238418579
+        }
+      },
+      "tokens": 16
+    }
+  ]
+}

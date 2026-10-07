@@ -1,0 +1,2215 @@
+{
+  "schema_version": 2,
+  "kind": "vllm_mxflashattn_candidate",
+  "model": "/mnt/moark-models/Qwen3-0.6B",
+  "vllm": "0.17.0",
+  "torch": "2.8.0+metax3.5.3.9",
+  "device": "MetaX C500",
+  "max_tokens": 4,
+  "suite": true,
+  "registration": {
+    "registered": "true",
+    "backend_name": "MXFLASHATTN_V017",
+    "backend_path": "integrations.vllm.vllm_plugin.MXFlashAttnBackend",
+    "decoder_path": "mxflashattn_single_token_decode_vendor_prefill",
+    "encoder_path": "mxflashattn_public_api"
+  },
+  "candidate_requires_mxflashattn_decode": true,
+  "candidate_dispatch_verified": true,
+  "status": "candidate_dispatch_verified",
+  "runs": [
+    {
+      "index": 0,
+      "prompt": "Explain paged KV cache in one sentence.",
+      "prompt_tokens": 10,
+      "generated_tokens": 4,
+      "generated_text": " Paged KV cache",
+      "wall_latency_ms": 289.3982990644872,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 13.821781306007855,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62461169664,
+      "dispatch_events": [
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "prompt": "List three practical benefits of grouped-query attention.",
+      "prompt_tokens": 9,
+      "generated_tokens": 4,
+      "generated_text": " What are the benefits",
+      "wall_latency_ms": 88.21257716044784,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 45.34500780681752,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62461169664,
+      "dispatch_events": [
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(9,)"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "prompt": "Give a concise checklist for validating an attention kernel.",
+      "prompt_tokens": 10,
+      "generated_tokens": 4,
+      "generated_text": " What are the key",
+      "wall_latency_ms": 86.47996792569757,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 46.25348616498964,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62461169664,
+      "dispatch_events": [
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "prompt": "Describe how causal masking changes autoregressive decoding.",
+      "prompt_tokens": 10,
+      "generated_tokens": 4,
+      "generated_text": " What is the effect",
+      "wall_latency_ms": 86.47273201495409,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 46.257356588528545,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62461169664,
+      "dispatch_events": [
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:query_lens=(10,)"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        },
+        {
+          "fallback": "false",
+          "operation": "flash_attn_with_kvcache",
+          "path": "mxflashattn_decoder"
+        }
+      ]
+    }
+  ],
+  "warning": "Prefill may delegate to vendor; candidate records decoder dispatch events."
+}

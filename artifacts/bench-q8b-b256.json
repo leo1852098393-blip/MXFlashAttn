@@ -1,0 +1,91 @@
+{
+  "kind": "e2e_batch_bench",
+  "model": "/data/models/Qwen3-8B",
+  "max_tokens": 256,
+  "max_model_len": 2048,
+  "registration": {
+    "registered": "true",
+    "backend_name": "MXFLASHATTN_V017",
+    "backend_path": "integrations.vllm.vllm_plugin.MXFlashAttnBackend",
+    "decoder_path": "vendor_direct_with_aten_correctness_fallback",
+    "encoder_path": "mxflashattn_public_api"
+  },
+  "results": {
+    "v7": [
+      {
+        "batch": 128,
+        "max_tokens": 256,
+        "wall_s": 25.241,
+        "gen_tokens": 32768,
+        "tokens_per_s": 1298.23,
+        "dispatch_delta": {
+          "vendor_direct": 9216,
+          "native_decode": 9216
+        }
+      },
+      {
+        "batch": 64,
+        "max_tokens": 256,
+        "wall_s": 14.537,
+        "gen_tokens": 16384,
+        "tokens_per_s": 1127.09,
+        "dispatch_delta": {
+          "vendor_direct": 9216,
+          "native_decode": 9216
+        }
+      }
+    ],
+    "m1_um": [
+      {
+        "batch": 128,
+        "max_tokens": 256,
+        "wall_s": 8.621,
+        "gen_tokens": 32768,
+        "tokens_per_s": 3800.88,
+        "dispatch_delta": {
+          "vendor_direct": 9216,
+          "m1_split_decode": 9216
+        }
+      },
+      {
+        "batch": 64,
+        "max_tokens": 256,
+        "wall_s": 6.687,
+        "gen_tokens": 16384,
+        "tokens_per_s": 2450.21,
+        "dispatch_delta": {
+          "vendor_direct": 9216,
+          "m1_split_decode": 9216
+        }
+      }
+    ],
+    "m1_um2": [
+      {
+        "batch": 128,
+        "max_tokens": 256,
+        "wall_s": 8.583,
+        "gen_tokens": 32768,
+        "tokens_per_s": 3817.94,
+        "dispatch_delta": {
+          "vendor_direct": 9216,
+          "m1_split_decode": 9216
+        }
+      },
+      {
+        "batch": 64,
+        "max_tokens": 256,
+        "wall_s": 6.616,
+        "gen_tokens": 16384,
+        "tokens_per_s": 2476.4,
+        "dispatch_delta": {
+          "vendor_direct": 9216,
+          "m1_split_decode": 9216
+        }
+      }
+    ],
+    "text_match": {
+      "m1_um": "3/4",
+      "m1_um2": "3/4"
+    }
+  }
+}

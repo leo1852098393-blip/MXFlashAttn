@@ -1,0 +1,58 @@
+{
+  "kind": "e2e_batch_bench",
+  "model": "/data/models/Qwen2.5-14B-Instruct",
+  "max_tokens": 256,
+  "max_model_len": 2048,
+  "registration": {
+    "registered": "true",
+    "backend_name": "MXFLASHATTN_V017",
+    "backend_path": "integrations.vllm.vllm_plugin.MXFlashAttnBackend",
+    "decoder_path": "vendor_direct_with_aten_correctness_fallback",
+    "encoder_path": "mxflashattn_public_api"
+  },
+  "results": {
+    "v7": [
+      {
+        "batch": 64,
+        "max_tokens": 256,
+        "wall_s": 23.755,
+        "gen_tokens": 16123,
+        "tokens_per_s": 678.71,
+        "dispatch_delta": {
+          "native_decode": 12288,
+          "vendor_direct": 12288
+        }
+      }
+    ],
+    "m1_um": [
+      {
+        "batch": 64,
+        "max_tokens": 256,
+        "wall_s": 23.415,
+        "gen_tokens": 16126,
+        "tokens_per_s": 688.7,
+        "dispatch_delta": {
+          "native_decode": 12288,
+          "vendor_direct": 12288
+        }
+      }
+    ],
+    "m1_um2": [
+      {
+        "batch": 64,
+        "max_tokens": 256,
+        "wall_s": 23.232,
+        "gen_tokens": 16126,
+        "tokens_per_s": 694.14,
+        "dispatch_delta": {
+          "native_decode": 12288,
+          "vendor_direct": 12288
+        }
+      }
+    ],
+    "text_match": {
+      "m1_um": "1/4",
+      "m1_um2": "1/4"
+    }
+  }
+}

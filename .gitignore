@@ -1,0 +1,44 @@
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# 评测证据必须随仓库公开（README 直接引用 artifacts/ 下的报告），不要忽略
+# artifacts/
+# 只忽略运行期噪声
+artifacts/*.log
+artifacts/*.tmp
+# 顶层运行日志（实例 shell 重定向产生）；docs/gate4/evidence/ 下的 .log 是证据，必须保留
+/*.log
+
+# mxcc 编译产物（.so/.o 由 build_*.sh 在 csrc_native/ 下生成，随平台变化，不入库）
+*.so
+*.o
+*.dylib
+
+# 凭据类文件一律不得入库
+*实例*.txt
+*实例信息*
+*credentials*
+*.pem
+*.ppk
+.env
+
+# Local submission materials (kept outside the public repository)
+/full_project_plan.md
+/seed_application.md
+/IMPLEMENTATION_PLAN.md
+
+/_staging_old/
+
+# 解压 tar 产生的嵌套旧副本树（内容已上浮到主树，且为未修口径的旧版）
+/MXFlashAttn_v1.3.0/
+
+# gate1/ 下由 mxcc 编译出的 ELF 可执行文件与 vendor 测试 dump（gate1a/b/c 的 .cpp 源码保留）
+/gate1/gate1a
+/gate1/gate1b
+/gate1/gate1c
+/gate1/vendor_*.bin

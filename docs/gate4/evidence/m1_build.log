@@ -1,0 +1,29 @@
++ export MACA_PATH=/opt/maca
++ MACA_PATH=/opt/maca
++ SRC=/root/MXFlashAttn_v1.3.0-kernel/csrc_native
++ MXCC=/opt/maca/mxgpu_llvm/bin/mxcc
++ cd /root/MXFlashAttn_v1.3.0-kernel/csrc_native
++ rm -f m1_kernel.o m1_binding.o mxmmain.so
++ /opt/maca/mxgpu_llvm/bin/mxcc -x maca -offload-arch native -fPIC -O3 -std=c++17 -c m1_kernel.cpp -o m1_kernel.o
++ tee /tmp/m1_k.log
++ grep -iE 'error|warning'
++ head -12
++ RC1=0
++ '[' 0 -ne 0 ']'
++ /opt/maca/mxgpu_llvm/bin/mxcc -fPIC -O2 -std=c++17 -c m1_binding.cpp -o m1_binding.o -I/opt/conda/lib/python3.10/site-packages/torch/include -I/opt/conda/lib/python3.10/site-packages/torch/include/torch/csrc/api/include -I/opt/conda/include/python3.10 -DTORCH_EXTENSION_NAME=mxmmain -DTORCH_API_INCLUDE_EXTENSION_H -DUSE_MACA -DNV_ARCH_A100
++ tee /tmp/m1_b.log
++ grep -iE 'error|warning'
++ head -12
+/opt/conda/lib/python3.10/site-packages/torch/include/c10/core/DynamicCast.h:149:11: warning: 30 enumeration values not handled in switch: 'QInt8', 'QUInt8', 'QInt32'... [-Wswitch]
+1 warning generated.
++ RC2=0
++ '[' 0 -ne 0 ']'
++ /opt/maca/mxgpu_llvm/bin/mxcc -shared -fPIC m1_kernel.o m1_binding.o -L/opt/conda/lib/python3.10/site-packages/torch/lib -lc10 -lc10_cuda -ltorch -ltorch_cpu -ltorch_python -o mxmmain.so
++ grep -iE 'error|warning'
++ head -12
++ RC3=0
++ '[' 0 -ne 0 ']'
++ ls -la mxmmain.so
+-rwxr-xr-x 1 root root 12001136 Oct  7 11:34 mxmmain.so
++ echo M1_BUILD_OK
+M1_BUILD_OK

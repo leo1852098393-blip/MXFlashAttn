@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-06",
+  "host": "c5c8a002cfde",
+  "python": "3.10.10",
+  "torch": "2.8.0+metax3.5.3.9",
+  "cuda_available": true,
+  "device_name": "MetaX C500",
+  "device_memory_gib": 63.59,
+  "flash-attn": "2.6.3+metax3.5.3.9torch2.8",
+  "vllm": "0.17.0",
+  "aten_extension": "not built: ModuleNotFoundError: No module named 'mxflashattn._C'"
+}

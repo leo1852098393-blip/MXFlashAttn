@@ -1,0 +1,6 @@
+# Install the MXMACA vendor PyTorch build that matches the target C500 driver/runtime first.
+# Do not replace it with the upstream CPU or CUDA wheel.
+# Optional optimized provider verified on C500: flash-attn==2.6.3+metax3.5.3.9torch2.8
+# Install that vendor wheel from the matching MetaX distribution; generic CUDA wheels are ignored.
+PyYAML>=6.0,<7
+setuptools>=77

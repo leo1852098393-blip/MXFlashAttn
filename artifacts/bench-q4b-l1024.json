@@ -1,0 +1,91 @@
+{
+  "kind": "e2e_batch_bench",
+  "model": "/root/models/Qwen3-4B",
+  "max_tokens": 1024,
+  "max_model_len": 2048,
+  "registration": {
+    "registered": "true",
+    "backend_name": "MXFLASHATTN_V017",
+    "backend_path": "integrations.vllm.vllm_plugin.MXFlashAttnBackend",
+    "decoder_path": "vendor_direct_with_aten_correctness_fallback",
+    "encoder_path": "mxflashattn_public_api"
+  },
+  "results": {
+    "v7": [
+      {
+        "batch": 32,
+        "max_tokens": 1024,
+        "wall_s": 91.373,
+        "gen_tokens": 32768,
+        "tokens_per_s": 358.62,
+        "dispatch_delta": {
+          "vendor_direct": 36864,
+          "native_decode": 36864
+        }
+      },
+      {
+        "batch": 16,
+        "max_tokens": 1024,
+        "wall_s": 64.047,
+        "gen_tokens": 16384,
+        "tokens_per_s": 255.81,
+        "dispatch_delta": {
+          "vendor_direct": 36864,
+          "native_decode": 36864
+        }
+      }
+    ],
+    "m1_um": [
+      {
+        "batch": 32,
+        "max_tokens": 1024,
+        "wall_s": 25.03,
+        "gen_tokens": 32768,
+        "tokens_per_s": 1309.15,
+        "dispatch_delta": {
+          "m1_split_decode": 36864,
+          "vendor_direct": 36864
+        }
+      },
+      {
+        "batch": 16,
+        "max_tokens": 1024,
+        "wall_s": 23.154,
+        "gen_tokens": 16384,
+        "tokens_per_s": 707.61,
+        "dispatch_delta": {
+          "m1_split_decode": 36864,
+          "vendor_direct": 36864
+        }
+      }
+    ],
+    "m1_um2": [
+      {
+        "batch": 32,
+        "max_tokens": 1024,
+        "wall_s": 24.898,
+        "gen_tokens": 32768,
+        "tokens_per_s": 1316.11,
+        "dispatch_delta": {
+          "m1_split_decode": 36864,
+          "vendor_direct": 36864
+        }
+      },
+      {
+        "batch": 16,
+        "max_tokens": 1024,
+        "wall_s": 23.243,
+        "gen_tokens": 16384,
+        "tokens_per_s": 704.9,
+        "dispatch_delta": {
+          "m1_split_decode": 36864,
+          "vendor_direct": 36864
+        }
+      }
+    ],
+    "text_match": {
+      "m1_um": "2/4",
+      "m1_um2": "3/4"
+    }
+  }
+}

@@ -1,0 +1,535 @@
+{
+  "schema_version": 2,
+  "kind": "vllm_mxflashattn_candidate",
+  "model": "/root/models/Qwen3-0.6B",
+  "vllm": "0.17.0",
+  "torch": "2.8.0+metax3.5.3.9",
+  "device": "MetaX C500",
+  "max_tokens": 16,
+  "suite": true,
+  "registration": {
+    "registered": "true",
+    "backend_name": "MXFLASHATTN_V017",
+    "backend_path": "integrations.vllm.vllm_plugin.MXFlashAttnBackend",
+    "decoder_path": "vendor_direct_with_aten_correctness_fallback",
+    "encoder_path": "mxflashattn_public_api"
+  },
+  "candidate_requires_mxflashattn_decode": true,
+  "candidate_dispatch_verified": false,
+  "status": "candidate_not_verified",
+  "runs": [
+    {
+      "index": 0,
+      "prompt": "Explain paged KV cache in one sentence. Case 00.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "01.01.01.01.01.0",
+      "wall_latency_ms": 106.53340676799417,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 150.18763114226138,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62578778112,
+      "dispatch_events": [
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "prompt": "List three practical benefits of grouped-query attention. Case 01.",
+      "prompt_tokens": 14,
+      "generated_tokens": 16,
+      "generated_text": "1: Grouped Query Attention in the Context of the 2023",
+      "wall_latency_ms": 62.525792978703976,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 255.89439554088557,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62578778112,
+      "dispatch_events": [
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=14"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "prompt": "Give a concise checklist for validating an attention kernel. Case 02.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "1.1.1.1.1.1.1.1.",
+      "wall_latency_ms": 62.127833254635334,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 257.5335266308558,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62578778112,
+      "dispatch_events": [
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "prompt": "Describe how causal masking changes autoregressive decoding. Case 03.",
+      "prompt_tokens": 15,
+      "generated_tokens": 16,
+      "generated_text": "1.1.1.1.1.1.1.1.",
+      "wall_latency_ms": 62.34478671103716,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 256.637336400855,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62578778112,
+      "dispatch_events": [
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        },
+        {
+          "path": "vendor_prefill_or_blocked",
+          "reason": "only_single_token_decode_supported:max_query_len=15"
+        }
+      ]
+    }
+  ],
+  "warning": "Prefill may delegate to vendor; candidate records decoder dispatch events."
+}

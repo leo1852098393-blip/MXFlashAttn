@@ -1,0 +1,58 @@
+{
+  "kind": "e2e_batch_bench",
+  "model": "/data/models/TinyLlama-1.1B-Chat-v1.0",
+  "max_tokens": 256,
+  "max_model_len": 2048,
+  "registration": {
+    "registered": "true",
+    "backend_name": "MXFLASHATTN_V017",
+    "backend_path": "integrations.vllm.vllm_plugin.MXFlashAttnBackend",
+    "decoder_path": "vendor_direct_with_aten_correctness_fallback",
+    "encoder_path": "mxflashattn_public_api"
+  },
+  "results": {
+    "v7": [
+      {
+        "batch": 64,
+        "max_tokens": 256,
+        "wall_s": 10.973,
+        "gen_tokens": 8806,
+        "tokens_per_s": 802.51,
+        "dispatch_delta": {
+          "native_decode": 5610,
+          "vendor_direct": 5632
+        }
+      }
+    ],
+    "m1_um": [
+      {
+        "batch": 64,
+        "max_tokens": 256,
+        "wall_s": 3.876,
+        "gen_tokens": 9242,
+        "tokens_per_s": 2384.59,
+        "dispatch_delta": {
+          "vendor_direct": 5632,
+          "m1_split_decode": 5610
+        }
+      }
+    ],
+    "m1_um2": [
+      {
+        "batch": 64,
+        "max_tokens": 256,
+        "wall_s": 3.843,
+        "gen_tokens": 9139,
+        "tokens_per_s": 2378.3,
+        "dispatch_delta": {
+          "vendor_direct": 5632,
+          "m1_split_decode": 5610
+        }
+      }
+    ],
+    "text_match": {
+      "m1_um": "3/4",
+      "m1_um2": "3/4"
+    }
+  }
+}
