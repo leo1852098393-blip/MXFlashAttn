@@ -1,0 +1,1 @@
+{"fallback": "true", "fallback_reason": "vendor_call_failed:RuntimeError:seqlens_k must be contiguous", "operation": "flash_attn_with_kvcache", "path": "mxmac_aten_correctness"}

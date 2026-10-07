@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "kind": "vllm_decoder_layout_probe",
+  "target_vllm": "0.17.0",
+  "device": "cpu",
+  "dtype": "torch.float16",
+  "contract": "single_token_decode_paged_kv",
+  "source_layout": {
+    "query": "[num_tokens,num_heads,head_size]",
+    "kv_cache": "[2,num_blocks,block_size,num_kv_heads,head_size]",
+    "metadata": [
+      "num_actual_tokens",
+      "max_query_len",
+      "query_start_loc",
+      "max_seq_len",
+      "seq_lens",
+      "block_table",
+      "slot_mapping",
+      "scheduler_metadata",
+      "use_cascade"
+    ]
+  },
+  "status": "adapter_exercised",
+  "layout": {
+    "num_actual_tokens": 2,
+    "batch_size": 2,
+    "query_lens": [
+      1,
+      1
+    ],
+    "max_query_len": 1,
+    "seq_lens": [
+      17,
+      16
+    ],
+    "query_start_loc": [
+      0,
+      1,
+      2
+    ],
+    "block_table_shape": [
+      2,
+      2
+    ],
+    "kv_cache_shape": [
+      2,
+      4,
+      16,
+      2,
+      64
+    ],
+    "scheduler_metadata_present": false
+  },
+  "output_shape": [
+    2,
+    256
+  ],
+  "dispatch": {
+    "backend": "reference",
+    "operation": "flash_attn_with_kvcache",
+    "fallback_reason": "native_backend_requires_accelerator_tensor"
+  },
+  "elapsed_ms": 2.49239999538986,
+  "fallback_allowed": true
+}

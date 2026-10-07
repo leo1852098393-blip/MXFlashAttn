@@ -1,0 +1,65 @@
+{
+  "schema_version": 2,
+  "kind": "vllm_baseline_only",
+  "model": "/mnt/moark-models/Qwen3-0.6B",
+  "vllm": "0.17.0",
+  "torch": "2.8.0+metax3.5.3.9",
+  "device": "MetaX C500",
+  "max_tokens": 16,
+  "suite": true,
+  "runs": [
+    {
+      "index": 0,
+      "prompt": "Explain paged KV cache in one sentence.",
+      "prompt_tokens": 10,
+      "generated_tokens": 16,
+      "wall_latency_ms": 325.9961581788957,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 49.080332999567865,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62460919808
+    },
+    {
+      "index": 1,
+      "prompt": "List three practical benefits of grouped-query attention.",
+      "prompt_tokens": 9,
+      "generated_tokens": 16,
+      "wall_latency_ms": 208.30811792984605,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 76.80929653153736,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62460919808
+    },
+    {
+      "index": 2,
+      "prompt": "Give a concise checklist for validating an attention kernel.",
+      "prompt_tokens": 10,
+      "generated_tokens": 16,
+      "wall_latency_ms": 205.3488800302148,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 77.91617854280861,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62460919808
+    },
+    {
+      "index": 3,
+      "prompt": "Describe how causal masking changes autoregressive decoding.",
+      "prompt_tokens": 10,
+      "generated_tokens": 16,
+      "wall_latency_ms": 202.0219168625772,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 79.19932771890187,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62460919808
+    }
+  ],
+  "warning": "This baseline-only run does not exercise MXFlashAttn."
+}

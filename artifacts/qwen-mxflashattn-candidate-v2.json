@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "kind": "vllm_mxflashattn_candidate",
+  "model": "/mnt/moark-models/Qwen3-0.6B",
+  "vllm": "0.17.0",
+  "torch": "2.8.0+metax3.5.3.9",
+  "device": "MetaX C500",
+  "max_tokens": 16,
+  "suite": true,
+  "registration": {
+    "registered": "true",
+    "backend_name": "MXFLASHATTN_V017",
+    "decoder_path": "mxflashattn_single_token_decode_vendor_prefill",
+    "encoder_path": "mxflashattn_public_api"
+  },
+  "candidate_requires_mxflashattn_decode": true,
+  "candidate_dispatch_verified": false,
+  "status": "candidate_not_verified",
+  "runs": [
+    {
+      "index": 0,
+      "prompt": "Explain paged KV cache in one sentence.",
+      "prompt_tokens": 10,
+      "generated_tokens": 16,
+      "wall_latency_ms": 322.94475799426436,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 49.54407713372504,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62460919808,
+      "dispatch_events": []
+    },
+    {
+      "index": 1,
+      "prompt": "List three practical benefits of grouped-query attention.",
+      "prompt_tokens": 9,
+      "generated_tokens": 16,
+      "wall_latency_ms": 204.60337214171886,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 78.20007965908584,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62460919808,
+      "dispatch_events": []
+    },
+    {
+      "index": 2,
+      "prompt": "Give a concise checklist for validating an attention kernel.",
+      "prompt_tokens": 10,
+      "generated_tokens": 16,
+      "wall_latency_ms": 200.10204799473286,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 79.95920161907166,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62460919808,
+      "dispatch_events": []
+    },
+    {
+      "index": 3,
+      "prompt": "Describe how causal masking changes autoregressive decoding.",
+      "prompt_tokens": 10,
+      "generated_tokens": 16,
+      "wall_latency_ms": 198.35330126807094,
+      "first_token_latency_ms": null,
+      "request_finish_latency_ms": null,
+      "tokens_per_second": 80.66414774905252,
+      "peak_memory_allocated_bytes": 0,
+      "peak_memory_reserved_bytes": 0,
+      "mx_smi_vram_used_bytes": 62460919808,
+      "dispatch_events": []
+    }
+  ],
+  "warning": "Prefill may delegate to vendor; candidate records decoder dispatch events."
+}

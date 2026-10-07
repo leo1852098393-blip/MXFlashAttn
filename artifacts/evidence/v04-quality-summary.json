@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "device": "cuda",
+    "device_name": "MetaX C500",
+    "device_total_memory_bytes": 68283269120,
+    "torch": "2.8.0+metax3.5.3.9",
+    "runtime": "3.5.3.20",
+    "driver": "3.8.30",
+    "flash_attn": "2.6.3+metax3.5.3.9torch2.8",
+    "vllm": "0.17.0",
+    "warmup": 1,
+    "repeats": 3,
+    "seed": 20261005,
+    "fallback_enabled": false
+  },
+  "summary": {
+    "case_count": 12,
+    "backend_counts": {
+      "mxmac_flash_attn": 12
+    },
+    "fallback_case_count": 0,
+    "max_abs_error": 0.00048828125,
+    "rms_of_case_max_abs_error": 0.0002454484244101778,
+    "p95_of_case_max_abs_error": 0.00048828125,
+    "p99_of_case_max_abs_error": 0.00048828125,
+    "valid_relative_error_denominator_floor": 0.001,
+    "valid_relative_error_element_count": 35205,
+    "valid_relative_error_max": 0.08965517580509186,
+    "valid_relative_error_p95_across_cases": 0.010306524019688366,
+    "valid_relative_error_p99_across_cases": 0.024235914684832098,
+    "median_latency_reduction_pct": 68.159713944503,
+    "reference_peak_memory_bytes_max": 503362048,
+    "candidate_peak_memory_bytes_max": 202912768
+  }
+}

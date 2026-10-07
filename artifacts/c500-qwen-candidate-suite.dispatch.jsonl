@@ -1,0 +1,112 @@
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"path": "vendor_prefill_or_blocked", "reason": "only_single_token_decode_supported:query_lens=(10,)"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
+{"fallback": "false", "operation": "flash_attn_with_kvcache", "path": "mxflashattn_decoder"}
