@@ -1,8 +1,9 @@
 """平台体检：带宽 / 时钟 / expf 吞吐。"""
 import os, time, importlib.util
 import torch
+from local_paths import NATIVE_DIR
 
-SRC = "/root/MXFlashAttn_v1.3.0-kernel/csrc_native"
+SRC = str(NATIVE_DIR)
 spec = importlib.util.spec_from_file_location("mxprobe", os.path.join(SRC, "mxprobe.so"))
 ext = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(ext)

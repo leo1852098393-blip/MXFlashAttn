@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
 export MACA_PATH=/opt/maca
-SRC=/root/MXFlashAttn_v1.3.0-kernel/csrc_native
+SRC=${MXFLASHATTN_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}/csrc_native
 MXCC=/opt/maca/mxgpu_llvm/bin/mxcc
 cd "$SRC" || exit 1
 "$MXCC" -x maca -offload-arch native -fPIC -O2 -std=c++17 -c mma0_kernel.cpp -o mma0_kernel.o 2>&1 | grep -iE "error" | head -8

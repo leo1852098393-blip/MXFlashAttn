@@ -1,8 +1,9 @@
 import os, time, importlib.util
 import torch
+from local_paths import NATIVE_DIR
 
 spec = importlib.util.spec_from_file_location(
-    "wl", "/root/MXFlashAttn_v1.3.0-kernel/csrc_native/wl.so")
+    "wl", str(NATIVE_DIR / "wl.so"))
 wl = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(wl)
 

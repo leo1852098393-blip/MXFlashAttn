@@ -19,6 +19,9 @@ Also compare token-id sequences, not just text, and check whether the M1 run
 ever wrote into the output buffer.
 """
 import os, sys, json, time
+from pathlib import Path
+
+ROOT = Path(os.environ.get("MXFLASHATTN_ROOT", Path(__file__).resolve().parents[1]))
 
 os.environ.setdefault("MACA_PATH", "/opt/maca")
 os.environ["HF_HUB_OFFLINE"] = "1"
@@ -26,9 +29,11 @@ os.environ["VLLM_ENABLE_V1_MULTIPROCESSING"] = "0"
 os.environ["MXFLASHATTN_GRAPH_OFFICIAL_SPLIT"] = "1"
 os.environ["MXFA_NATIVE_DECODE"] = "1"
 os.environ["MXFLASHATTN_AUTOREGISTER"] = "1"
-os.environ["MXFLASHATTN_DISPATCH_LOG"] = "/root/diag_guard_dispatch.jsonl"
-sys.path.insert(0, "/root/MXFlashAttn_v1.3.0-kernel")
-os.chdir("/root/MXFlashAttn_v1.3.0-kernel")
+os.environ["MXFLASHATTN_DISPATCH_LOG"] = str(
+    Path(os.environ.get("MXFLASHATTN_DISPATCH_LOG", ROOT / "artifacts" / "diag_guard_dispatch.jsonl"))
+)
+sys.path.insert(0, str(ROOT))
+os.chdir(ROOT)
 
 from vllm import LLM, SamplingParams
 

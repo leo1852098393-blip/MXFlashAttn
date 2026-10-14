@@ -4,8 +4,9 @@ import os, sys, importlib.util
 import numpy as np
 import torch
 from vllm_metax.v1.attention.backends.fa_utils import flash_attn_with_kvcache
+from local_paths import NATIVE_DIR
 
-SRC = "/root/MXFlashAttn_v1.3.0-kernel/csrc_native"
+SRC = str(NATIVE_DIR)
 _ONLY = sys.argv[1:]  # 传 tag 只跑指定配置
 
 def load_ext(name, so):

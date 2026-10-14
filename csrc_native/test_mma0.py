@@ -2,8 +2,9 @@
 import os, importlib.util
 import numpy as np
 import torch
+from local_paths import NATIVE_DIR
 
-SRC = "/root/MXFlashAttn_v1.3.0-kernel/csrc_native"
+SRC = str(NATIVE_DIR)
 spec = importlib.util.spec_from_file_location("mxmma0", os.path.join(SRC, "mxmma0.so"))
 ext = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(ext)

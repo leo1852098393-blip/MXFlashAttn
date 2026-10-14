@@ -6,7 +6,8 @@ export LD_LIBRARY_PATH=/opt/conda/lib:${LD_LIBRARY_PATH:-}
 export PATH=/opt/conda/bin:$PATH
 export HF_HUB_OFFLINE=1
 
-M=/mnt/moark-models/PaddleOCR-VL
+M=${MXFLASHATTN_MODEL:-/mnt/moark-models/PaddleOCR-VL}
+export MXFLASHATTN_MODEL="$M"
 
 echo "===== registry probe: is PaddleOCRVLForConditionalGeneration known to vLLM? ====="
 /opt/conda/bin/python - <<'EOF'
@@ -20,13 +21,13 @@ EOF
 echo "PROBE_RC=$?"
 
 echo "===== try a tiny load (max_model_len 512, 1 token) ====="
-cd /root/MXFlashAttn_v1.3.0-kernel || exit 1
+cd ${MXFLASHATTN_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)} || exit 1
 /opt/conda/bin/python - <<'EOF' 2>&1 | tail -30
 import os
 os.environ.setdefault("VLLM_ENABLE_V1_MULTIPROCESSING", "0")
 from vllm import LLM, SamplingParams
 try:
-    llm = LLM(model="/mnt/moark-models/PaddleOCR-VL", trust_remote_code=True,
+    llm = LLM(model=os.environ["MXFLASHATTN_MODEL"], trust_remote_code=True,
               enforce_eager=True, max_model_len=512, gpu_memory_utilization=0.55)
     print("LOAD_OK")
 except Exception as e:

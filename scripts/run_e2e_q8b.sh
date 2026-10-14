@@ -6,15 +6,15 @@ set -x
 export MACA_PATH=/opt/maca
 export LD_LIBRARY_PATH=/opt/conda/lib:${LD_LIBRARY_PATH:-}
 export PATH=/opt/conda/bin:$PATH
-export PYTHONPATH=/root/MXFlashAttn_v1.3.0-kernel
+export PYTHONPATH=${MXFLASHATTN_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}
 export HF_HUB_OFFLINE=1
 export MXFLASHATTN_GRAPH_OFFICIAL_SPLIT=1
 export MXFA_NATIVE_DECODE=1
-cd /root/MXFlashAttn_v1.3.0-kernel || exit 1
+cd ${MXFLASHATTN_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)} || exit 1
 mkdir -p artifacts
 
 PY=/opt/conda/bin/python
-MODEL=/data/models/Qwen3-8B
+MODEL=${MXFLASHATTN_MODEL:-/data/models/Qwen3-8B}
 
 echo "===== SANITY b16 x64 ====="
 $PY csrc_native/bench_e2e.py --model $MODEL --batches 16 --max-tokens 64 \

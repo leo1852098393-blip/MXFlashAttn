@@ -1,8 +1,9 @@
 """shuffle 行为探针：确认 MACA 64-lane warp 上 indexed shuffle src>=32 的行为。"""
 import os, importlib.util
 import torch
+from local_paths import NATIVE_DIR
 
-SRC = "/root/MXFlashAttn_v1.3.0-kernel/csrc_native"
+SRC = str(NATIVE_DIR)
 
 def load_ext(name, so):
     spec = importlib.util.spec_from_file_location(name, os.path.join(SRC, so))

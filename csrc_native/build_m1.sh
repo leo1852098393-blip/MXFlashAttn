@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
 export MACA_PATH=/opt/maca
-SRC=/root/MXFlashAttn_v1.3.0-kernel/csrc_native
+SRC=${MXFLASHATTN_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}/csrc_native
 MXCC=/opt/maca/mxgpu_llvm/bin/mxcc
 cd "$SRC" || exit 1
 rm -f m1_kernel.o m1_binding.o mxmmain.so

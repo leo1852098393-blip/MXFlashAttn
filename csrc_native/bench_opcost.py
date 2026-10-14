@@ -1,8 +1,9 @@
 """指令成本微探针：单 block 逐变体计时。"""
 import os, importlib.util
 import torch
+from local_paths import NATIVE_DIR
 
-SRC = "/root/MXFlashAttn_v1.3.0-kernel/csrc_native"
+SRC = str(NATIVE_DIR)
 
 def load_ext(name, so):
     spec = importlib.util.spec_from_file_location(name, os.path.join(SRC, so))

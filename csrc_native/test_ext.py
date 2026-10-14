@@ -3,8 +3,9 @@ import os, sys
 import numpy as np
 import torch
 from vllm_metax.v1.attention.backends.fa_utils import flash_attn_with_kvcache
+from local_paths import NATIVE_DIR
 
-EXT_DIR = "/root/MXFlashAttn_v1.3.0-kernel/csrc_native"
+EXT_DIR = str(NATIVE_DIR)
 sys.path.insert(0, EXT_DIR)
 import importlib.util
 spec = importlib.util.spec_from_file_location("mxfadecode", os.path.join(EXT_DIR, "mxfadecode.so"))

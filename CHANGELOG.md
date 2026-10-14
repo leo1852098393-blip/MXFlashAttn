@@ -1,6 +1,9 @@
 # CHANGELOG
 
-## v1.3.0 (2026-10-07) - M1 paged-KV decode kernel
+## v1.3.0 (2026-10-13 local candidate) - M1 paged-KV decode kernel
+
+> 2026-10-07 的 Gate 4 数字（包括 3.67x、6.48x）保留为历史开发证据；
+> 2026-10-13 的 64G C500 复测是当前申报和发布候选的主口径。
 
 ### 新增
 - `csrc_native/m1_kernel.cpp` + `m1_binding.cpp`：split-KV + combine decode 内核
@@ -43,9 +46,10 @@
 - **GQ=8 全路径打通（PaddleOCR-VL，16Q/2KV，continuous batching）**：b16×64 1.20x；
   b64×256 1.53x；b32×1024 2.47x。派发 1134/4590/18414 次 `m1_split_decode`、0 回退，
   文本 4/4。
-- HD=256 拒绝路径（Qwen3.5-9B，GQ=4 合法但 head_dim=256 越界）：公开 API 层
-  `mxflashattn/api.py:191` 显式 ValueError 拒绝，非静默错误。两层守卫（API 头维度 +
-  binding GQ）合计覆盖当前已定义的 unsupported contract，不对未纳入 contract 的其他组合作支持承诺。
+- HD=256 回退路径（Qwen3.5-9B，GQ=4 合法但 head_dim=256 超出 M1 contract）：
+  vLLM official split 现在在进入 MXFlashAttn 公共 API 前交回原始 MetaX/vendor
+  KV-cache 实现。修复版真实生成成功，M1 dispatch=0，M1-UM/M1-UM2 均为 4/4
+  文本匹配；直接调用公共 API 仍显式拒绝，不静默计算。
 - **GQ=5 守卫拒绝侧真实模型闭环（Qwen2.5-14B-Instruct，40Q/8KV = GQ=5，HD=128，48 层）**：内核 binding 层明确拒绝（`split kernel unsupported config: D=128 GQ=5`），三档 `m1_split_decode` 均为 0。另确认 **GQ=6 客观不可得**：40+ 个主流 checkpoint 中的 GQ=6 全部 head_dim=256，会被 API 层先拒。定点对比实测 v7 vs v7 = 4/4、v7 vs M1 = 4/4，守卫路径文本逐 token 一致。
 - **HD=64 × GQ=8 全路径打通（TinyLlama-1.1B-Chat-v1.0，32Q/4KV，continuous batching）**：
   b16×64 0.97x（发射延迟区持平）；b64×256 **2.96x**；b32×1024 **6.48x**。派发
@@ -57,6 +61,16 @@
 ### 依赖
 - vLLM 接线：`integrations/vllm/vllm_plugin.py` 增加 `MXFA_M1_DECODE=1` 门控分支
   （NP 启发式 + 异常自动落回 v7），`MXFA_M1_UM` 控制 softmax 模式（默认 2=分桶）。
+
+### 2026-10-13 C500 64G 复测
+
+- 环境：MetaX C500 64G、MACA 3.5.3.20、PyTorch
+  `2.8.0+metax3.5.3.9`、vLLM 0.17.0。
+- Qwen3-4B：batch=128/256 token 为 3.31x，batch=32/1024 token 为 3.59x，
+  相对项目 v7，且由 `m1_split_decode` dispatch 证实。
+- Qwen3-8B batch=16/256 token 为 1.40x；PaddleOCR-VL GQ=8 batch=16/64 token
+  为 1.19x。结果用于跨模型和 GQA 形状复核，不外推为固定倍率。
+- 修复 vLLM official split 的 head_dim=256 回退，并完成 Qwen3.5-9B 真实生成验证。
 
 
 ## v1.1.0-vendor-wiring

@@ -1,40 +1,50 @@
 # MXFlashAttn
 
-> **状态（2026-10-07）：v1.3.0。自研 split-KV decode 内核 M1 已在 MetaX C500 上完成
-> Gate 4 验证并在 vLLM 0.17.0 中实际接管 decode 步骤。**
+> **状态（2026-10-13）：v1.3.0 本地发布候选。自研 split-KV decode 内核 M1 已在
+> MetaX C500 64G 上完成真实 vLLM 0.17.0 生成、dispatch 和回退验证。**
+>
+> **项目边界：**这是面向 MXMACA/MetaX C500 的专项适配与 decode 优化工程，
+> 不是跨硬件 FlashAttention 替代品，也不是 MXAttention（MXFP4）复现。
 
 中文说明 · **[English](README.en.md)**
 
 MXFlashAttn 是面向 **MXMACA / MetaX C500** 的 FlashAttention 兼容前向算子与推理适配项目。
-v1.3.0 起包含**自研 device kernel**（`csrc_native/m1_kernel.cpp`，split-KV paged decode），
-在已验证的 C500 continuous-batching 场景中，相对本项目 v7 路径取得约 **0.97×–6.48×** 端到端吞吐；其中长序列/中低并发区间达到 **2.0×–6.48×**，短序列低并发可能持平或略负。
+v1.3.0 起包含**自研 device kernel**（`csrc_native/m1_kernel.cpp`，split-KV paged decode）。
+2026-10-13 的 64G C500 复测中，Qwen3-4B 在 batch=32、max_tokens=1024 的长上下文
+decode 场景相对本项目 v7 路径达到约 **3.59×** 吞吐；跨模型结果表明收益依赖模型、
+batch 和 KV 长度，短序列或低并发不保证加速。
 
 [![CI](https://github.com/leo1852098393-blip/MXFlashAttn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/leo1852098393-blip/MXFlashAttn/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%2B-3776AB.svg)](pyproject.toml)
 
-## v1.3.0核心结果
+## 2026-10-13 复测结果（申报主口径）
 
-自研 M1 内核 vs 本项目 v7 split 路径，continuous batching 端到端吞吐（tok/s）：
+环境：MetaX C500 64G、MACA 3.5.3.20、驱动 3.8.30、PyTorch
+`2.8.0+metax3.5.3.9`、vLLM 0.17.0。所有 M1 结果均由 dispatch 日志确认进入
+`m1_split_decode`。
 
-| 模型 | 形状 | b64x256 | b32x1024 |
-| --- | --- | --- | --- |
-| Qwen3-4B | GQ=4 / HD=128 | 2.13x | 3.67x |
-| Qwen3-8B | GQ=4 / HD=128 | 2.20x | 3.49x |
-| PaddleOCR-VL | GQ=8 / HD=128 | 1.53x | 2.47x |
-| TinyLlama-1.1B | GQ=8 / HD=64 | 2.96x | **6.48x** |
+| 模型与场景 | v7 | M1-UM2 | 相对 v7 |
+| --- | ---: | ---: | ---: |
+| Qwen3-4B，batch=128，256 token | 1375.59 tok/s | 4554.69 tok/s | **3.31×** |
+| Qwen3-4B，batch=32，1024 token | 359.82 tok/s | 1293.48 tok/s | **3.59×** |
+| Qwen3-8B，batch=16，256 token | 500.79 tok/s | 703.06 tok/s | **1.40×** |
+| PaddleOCR-VL，batch=16，64 token | 281.73 tok/s | 334.71 tok/s | **1.19×** |
 
-两条要点：
+这些数字只描述表中 C500 配置，不外推为所有模型或所有请求形态的固定倍率。Qwen3-4B
+长上下文阶段峰值显存约 59.6 GiB；本轮没有完成统一 TTFT/P95 评测。
 
-1. **在当前验证的 0.6B、1.1B、4B、8B 模型中，收益主要随 batch × 序列形态变化，未观察到明显的模型规模依赖。** 4B 与 8B 在四个主场景逐一复现、
-   偏差 <9%。短序列低并发（b16x64）是发射延迟区，收益持平甚至略负。
-2. **split-KV 不是"优化"，而是自研 decode在大模型上可用的前提。** Qwen3-4B 上 v7
-   自研 decode 比 vendor 直连慢 3.2x（1383 vs 4453 tok/s），M1 把它拉回 vendor 水平并略优。
+2026-10-07 Gate 4 的更大场景矩阵（包括 3.67×、6.48× 等数字）保留在历史报告中，
+用于说明研发过程与形状覆盖，不与本轮复测混成同一组结果：
+[`docs/gate4/Gate4_收官报告.md`](docs/gate4/Gate4_收官报告.md)。
 
 支持形状 `{GQ in {2,4,8} x HD in {64,128}}` 的**全部6 个格子均有真实模型 E2E 证据**；
-当前已定义的unsupported contract（非 2 幂 GQ 中已验证的 GQ=5/7、head_dim > 128）由两层守卫显式拒绝或回退且不影响生成正确性，未纳入 contract 的其他组合不作支持承诺。
+M1 不支持的形状不得直接调用 binding。vLLM official-split 路径会把这些形状交还原始
+MetaX/vendor KV-cache 实现。2026-10-13 已用 Qwen3.5-9B（head_dim=256）验证：
+真实生成成功、M1 dispatch=0、M1-UM/M1-UM2 均为 4/4 文本匹配。
 
-完整证据：[`docs/gate4/Gate4_收官报告.md`](docs/gate4/Gate4_收官报告.md)、
+新一轮原始证据和报告位于申报工作空间的本地目录 `02_evidence/c500_20261013/`；
+公开仓库内的历史 Gate 4 证据见
 [`docs/gate4/E2E_大模型与守卫验证.md`](docs/gate4/E2E_大模型与守卫验证.md)。
 
 ## 快速复现（需要 C500）
@@ -51,7 +61,7 @@ python csrc_native/test_m1.py       # 稳健性矩阵：s1~s8192 / GQA 2,4,8 / b
 ```bash
 export MXFLASHATTN_GRAPH_OFFICIAL_SPLIT=1 MXFA_NATIVE_DECODE=1
 export VLLM_ENABLE_V1_MULTIPROCESSING=0   # EngineCore 是子进程，否则 env 热切换无效
-python csrc_native/bench_e2e.py --model /path/to/Qwen3-4B --tag q4b
+python csrc_native/bench_e2e.py --model /path/to/Qwen3-4B --batches 128 64 --max-tokens 256 --output artifacts/bench-q4b.json
 ```
 
 **判据：先查 `dispatch.jsonl` 里 `m1_split_decode` 的事件计数，再信吞吐数字。**
@@ -64,8 +74,9 @@ python csrc_native/bench_e2e.py --model /path/to/Qwen3-4B --tag q4b
 | FP16 / BF16 forward | C500 已验证 |
 | Head dimension 64 / 128 | C500 已验证 |
 | GQA 比率 2 / 4 / 8 | C500 已验证 |
-| GQA 非 2 幂（当前已验证 GQ=5/7） | 干净拒绝，落回 v7；未纳入 contract 的其他比率不作支持承诺 |
-| head_dim > 128 | 公开 API 层ValueError 拒绝 |
+| M1 不支持的 GQA 比率（历史验证 GQ=5/7） | 不进入 M1；由上层回退，未验证比率不作支持承诺 |
+| vLLM 中 head_dim > 128 | 不进入 M1；official split 回退原始 MetaX/vendor 路径 |
+| 直接调用 MXFlashAttn 公共 API 的 head_dim > 128 | 显式 `ValueError`，不静默计算 |
 | 自研 split-KV decode kernel（M1） | C500 已验证，vLLM 0.17.0 接线 |
 | dense / varlen / paged KV cache | API 已实现；paged KV append 已在 C500 验证 |
 | dispatch 后端 | `m1_split_decode`（M1）→ `native_decode`（v7）→ `vendor_direct` → `reference` |
@@ -85,7 +96,7 @@ csrc_native/       自研 M1 split-KV decode 内核 + v7 内核 + 基准/测试/
 integrations/vllm/ vLLM 0.17.0 适配桥接、decoder adapter 与 preflight
 benchmarks/        固定配置、公平矩阵运行器和报告工具
 scripts/           C500 实例运维与 E2E 复现脚本（模型暂存、形状扫描、各模型 E2E 编排）
-docs/gate4/        Gate 4 验证报告与全部原始证据
+docs/gate4/        Gate 4 技术报告（原始实例日志保留在本地工作空间）
 docs/results/      C500 原始结果、报告和图表
 tests/             CPU/reference 与 C500 条件测试
 ```
@@ -96,9 +107,11 @@ tests/             CPU/reference 与 C500 条件测试
 Gate 4 各档E2E 的实例侧复现脚本在 `scripts/`（对应文档各节）：
 `run_e2e_q4b.sh` / `run_e2e_q8b.sh`（GQ=4 主场景）、
 `run_e2e_gq7.sh`（GQ=7 守卫拒绝）、`run_e2e_gq8.sh`（GQ=8 PaddleOCR-VL）、
-`run_e2e_hd256.sh`（HD=256 API 拒绝）、`run_queue.sh`（单卡串行编排）、
-`scan_shapes.sh`（共享模型库形状扫描）、`ms_install.sh` / `probe_paddle_vllm.sh`（模型获取与架构探测）、
-`stage_models.sh`（数据盘暂存）。这些脚本面向有 C500 的实例，路径按当时环境写死。
+`run_e2e_hd256.sh`（HD=256 回退验证）、`run_queue.sh`（单卡串行编排）、
+`scan_shapes.sh`（共享模型库形状扫描）和 `probe_paddle_vllm.sh`（架构探测）。
+这些公开脚本面向有 C500 的实例；模型下载与数据盘暂存脚本属于本地申报工作区，
+不随公开仓库发布。项目根目录支持通过 `MXFLASHATTN_ROOT` 覆盖，模型路径由各脚本中的
+`MODEL` 变量或命令行 `--model` 提供。
 
 ## 前向算子 API
 
@@ -141,13 +154,13 @@ v0.9 用固定 seed 覆盖 36 组 batch/seq/head_dim/GQA 比例/layout/dtype/cau
 仓库早期那组 384 用例 benchmark基线是本项目 PyTorch reference，已被 v0.9 公平矩阵取代，
 仅作历史数据保留在 `docs/results/`。
 
-仓库内已归档的三份原始数据：`docs/gate4/evidence/fair-matrix-c500.json`（公平矩阵）、
-`docs/gate4/evidence/vllm-vendor-36.json` 与 `docs/gate4/evidence/vllm-candidate-36.json`
-（模型级 vendor / candidate）。下面命令的 `--output` 是**重新生成**时的输出目标，
-不是指向上述归档文件。
+公开仓库提供脱敏结果摘要：[`docs/results/c500-2026-10-05.md`](docs/results/c500-2026-10-05.md)
+和 [`docs/results/c500-2026-10-13.md`](docs/results/c500-2026-10-13.md)。完整原始 JSON、
+dispatch 流和实例环境记录保留在本地申报工作空间，不随公开仓库发布。下面命令的
+`--output` 是**重新生成**时的本地输出目标。
 
 ```bash
-# 上面 --output 的三份归档数据位于 docs/gate4/evidence/，本命令会重新生成它们。
+# 评测输出默认写入被忽略的 artifacts/，只作为本地复现缓存。
 python -m benchmarks.fair_matrix --device cuda --count 36 --repeats 5 \
   --output artifacts/fair-matrix-c500.json
 python benchmarks/fair_report.py artifacts/fair-matrix-c500.json \

@@ -1,4 +1,7 @@
-# C500 复跑清单（v1.1.0-vendor-wiring）
+# 历史 C500 复跑清单（v1.1.0-vendor-wiring）
+
+> 本文件保留 v1.1 历史复跑口径，不代表当前 v1.3 状态。下一轮最小实验请使用
+> [`C500_MINIMAL_RUNBOOK.md`](C500_MINIMAL_RUNBOOK.md)。
 
 v1.1 的 vendor 直连接线**只在本地写完了代码，没有上机验证**。本文件是开箱即跑的执行顺序，
 任何一条跑出真实结果就落到 `artifacts/`，跑不出结果就如实记录失败原因。
@@ -144,7 +147,7 @@ python integrations/vllm/smoke_generate.py --model /mnt/moark-models/Qwen3-0.6B 
 2. `README.en.md` 的同一张表（中英文必须一致）
 3. `SUBMISSION_STATUS.md` 的"阶段成果"
 4. `V1.1_EVIDENCE_STATUS.md`：把 Gate 从"未完成"改成"已完成"，并写清复跑日期与环境
-5. `seed_application.md`（申报书）对应条目
+5. 申报书对应条目（申报材料位于上层工作空间，不随公开仓库发布）
 
 ## 第 6 步：发布动作
 

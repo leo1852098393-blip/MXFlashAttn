@@ -4,9 +4,12 @@ Inserts _load_m1_decode_ext() loader and an M1 branch in _try_native_decode
 before the v7 ext.paged_decode call. Idempotent. Falls back to v7 on any error
 because the whole M1 branch is inside the existing try/except.
 """
+import os
 import sys
+from pathlib import Path
 
-P = "/root/MXFlashAttn_v1.3.0-kernel/integrations/vllm/vllm_plugin.py"
+ROOT = Path(os.environ.get("MXFLASHATTN_ROOT", Path(__file__).resolve().parents[1]))
+P = ROOT / "integrations" / "vllm" / "vllm_plugin.py"
 src = open(P, encoding="utf-8").read()
 
 if "_load_m1_decode_ext" in src:

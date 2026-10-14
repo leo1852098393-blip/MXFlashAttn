@@ -3,8 +3,9 @@ import os, importlib.util
 import numpy as np
 import torch
 from vllm_metax.v1.attention.backends.fa_utils import flash_attn_with_kvcache
+from local_paths import NATIVE_DIR
 
-SRC = "/root/MXFlashAttn_v1.3.0-kernel/csrc_native"
+SRC = str(NATIVE_DIR)
 
 def load_ext(name, so):
     spec = importlib.util.spec_from_file_location(name, os.path.join(SRC, so))

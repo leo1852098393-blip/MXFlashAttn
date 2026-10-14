@@ -3,7 +3,8 @@
 # Faster and more reliable than probing remote model ids.
 import json, os, glob, sys
 
-ROOTS = ["/mnt/moark-models", "/data/models"]
+ROOTS = [p for p in os.environ.get(
+    "MXFLASHATTN_MODEL_ROOTS", "/mnt/moark-models:/data/models").split(":") if p]
 rows = []
 for root in ROOTS:
     for cfg in glob.glob(os.path.join(root, "**", "config.json"), recursive=True):

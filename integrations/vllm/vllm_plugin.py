@@ -123,6 +123,7 @@ if _plugin_log:
 
 
 _official_varlen = None
+_official_kvcache = None
 
 def _mx_varlen_compat(*args, **kwargs):
     _TAG = "varlen_compat"
@@ -131,7 +132,10 @@ def _mx_varlen_compat(*args, **kwargs):
             import torch as _t
             _cap = _t.cuda.is_current_stream_capturing()
             _q = args[0] if args else kwargs.get("q")
-            with open("/root/probe_split.log", "a", encoding="utf-8") as _ps:
+            _probe_path = os.getenv(
+                "MXFLASHATTN_SPLIT_PROBE_LOG", "/tmp/mxflashattn_probe_split.log"
+            )
+            with open(_probe_path, "a", encoding="utf-8") as _ps:
                 _ps.write("%s capturing=%s qshape=%s kwkeys=%s window=%r causal=%r\n" % (
                     _TAG, _cap, tuple(_q.shape) if _q is not None else None,
                     sorted(kwargs.keys()), kwargs.get("window_size"), kwargs.get("causal")))
@@ -319,7 +323,10 @@ def _mx_kvcache_compat(*args, **kwargs):
             import torch as _t
             _cap = _t.cuda.is_current_stream_capturing()
             _q = args[0] if args else kwargs.get("q")
-            with open("/root/probe_split.log", "a", encoding="utf-8") as _ps:
+            _probe_path = os.getenv(
+                "MXFLASHATTN_SPLIT_PROBE_LOG", "/tmp/mxflashattn_probe_split.log"
+            )
+            with open(_probe_path, "a", encoding="utf-8") as _ps:
                 _ps.write("%s capturing=%s qshape=%s kwkeys=%s window=%r causal=%r\n" % (
                     _TAG, _cap, tuple(_q.shape) if _q is not None else None,
                     sorted(kwargs.keys()), kwargs.get("window_size"), kwargs.get("causal")))
@@ -333,15 +340,22 @@ def _mx_kvcache_compat(*args, **kwargs):
     _native = _try_native_decode(args, kwargs)
     if _native is not None:
         return _native
+    # The public MXFlashAttn API intentionally rejects unsupported head
+    # dimensions and GQA ratios.  During the official MetaX split, those
+    # shapes must return to the original vendor implementation instead of
+    # surfacing the public API ValueError and taking down vLLM.
+    if _official_kvcache is not None:
+        return _official_kvcache(*args, **kwargs)
     return flash_attn_with_kvcache(*args, **kwargs)
 
 def _forward_official_split_with_mx(self, layer, query, key, value, kv_cache, metadata, output, output_scale, output_block_scale):
     fn = FlashAttentionImpl.forward
     glb = fn.__globals__
-    global _official_varlen
+    global _official_varlen, _official_kvcache
     old_var = glb.get("flash_attn_varlen_func")
     old_kv = glb.get("flash_attn_with_kvcache")
     _official_varlen = old_var
+    _official_kvcache = old_kv
     glb["flash_attn_varlen_func"] = _mx_varlen_compat
     glb["flash_attn_with_kvcache"] = _mx_kvcache_compat
     try:
@@ -353,6 +367,7 @@ def _forward_official_split_with_mx(self, layer, query, key, value, kv_cache, me
         glb["flash_attn_varlen_func"] = old_var
         glb["flash_attn_with_kvcache"] = old_kv
         _official_varlen = None
+        _official_kvcache = None
     _record_worker_event({"path": "vendor_direct", "operation": "official_split_mx" , "fallback": "false"})
     return result
 

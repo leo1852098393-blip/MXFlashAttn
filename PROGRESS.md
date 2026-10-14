@@ -1,27 +1,34 @@
-# MXFlashAttn v1.0.0 Submission Candidate
+# MXFlashAttn v1.3.0 Progress
 
-更新时间：2026-10-05
+更新时间：2026-10-13
 
-## 已验证证据
+## 当前状态
 
-- v0.7：C500 vLLM 0.17.0 decoder tensor/cache layout 与 dispatch contract。
-- v0.8：Qwen3-0.6B candidate 生成，JSONL 中出现 `mxflashattn_decoder`，并
-  明确记录 prefill vendor 委托；TTFT 保持为空。
-- v0.9：36 组固定 seed、同输入、同设备的 reference/SDPA/vendor/API 矩阵，
-  36/36 无异常，MXFlashAttn 对 reference 最大绝对误差 0.00390625。
-- v0.9 模型级补充：同一组 36 个固定 prompt 分别完成 vendor 与 candidate
-  运行，candidate 36/36 保留 `mxflashattn_decoder` dispatch 证据。
+- M1 split-KV decode 已在 64G C500 上完成真实 vLLM 0.17.0 生成、dispatch
+  和 fallback 回归，并接入 vLLM 0.17.0。
+- 当前复测证据覆盖 Qwen3-4B、Qwen3-8B、PaddleOCR-VL GQ=8，以及
+  Qwen3.5-9B head_dim=256 回退路径；历史 Gate 4 证据另行归档。
+- M1 支持矩阵的 6 个已声明格子为 `GQ={2,4,8} x head_dim={64,128}`；GQ=5/7 与
+  `head_dim>128` 不进入 M1。vLLM official split 对这些形状回退到原始
+  MetaX/vendor 路径；直接调用公共 API 仍显式拒绝。
+- 所有性能结论必须同时检查 `dispatch.jsonl`；没有 `m1_split_decode` 事件的记录不计入 M1。
 
-## 关键文件
+## 当前主结果
 
-- `artifacts/fair-matrix-c500.json`：36 组原始 C500 数据。
-- `artifacts/fair-matrix-c500.md`：公平矩阵报告。
-- `artifacts/fair-matrix-summary.json`：机器可读结论，vendor 加速声明为 false。
-- `artifacts/c500-qwen-candidate-suite.json`：模型级 candidate 证据。
-- `artifacts/c500-qwen-candidate-suite.dispatch.jsonl`：实际 dispatch 事件。
-- `artifacts/C500_ENVIRONMENT.json`：驱动、MXMACA、PyTorch 和 vLLM 版本。
+- Qwen3-4B batch=32、1024 token：相对 v7 为约 3.59x。
+- Qwen3-8B batch=16、256 token：约 1.40x。
+- PaddleOCR-VL GQ=8 batch=16、64 token：约 1.19x。
+- Qwen3-4B 长上下文复测峰值显存约 59.6 GiB。
 
-## 尚未完成或不承诺
+## 证据入口
 
-TTFT、backward、FP8、多卡、SGLang 和超过 MetaX vendor 的性能均未验证。
-这些限制必须保留在申报材料和公开说明中。
+- `docs/gate4/Gate4_收官报告.md`：Gate 4 总结。
+- `docs/gate4/E2E_大模型与守卫验证.md`：跨模型、守卫和 fallback 证据。
+- `02_evidence/model_benchmarks/E2E_SUMMARY.md`：本地整理的 30 条 E2E 记录分类。
+- `02_evidence/model_benchmarks/EVIDENCE_INDEX.json`：机器可读索引。
+
+## 当前不承诺
+
+TTFT/P95、backward、FP8、多卡和 SGLang 尚未验证；短序列低并发可能无收益或略慢。
+当前证据没有形成统一的 TTFT/P95 结论。阈值调度仍需在 C500 上校准，当前本地策略
+只负责候选形状判断和安全回退。

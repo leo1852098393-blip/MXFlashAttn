@@ -2,7 +2,7 @@
 # Gate 2: build torch extension (host: g++, device+link: mxcc)
 set -x
 export MACA_PATH=/opt/maca
-SRC=/root/MXFlashAttn_v1.3.0-kernel/csrc_native
+SRC=${MXFLASHATTN_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}/csrc_native
 TORCH=/opt/conda/lib/python3.10/site-packages/torch
 MXCC=/opt/maca/mxgpu_llvm/bin/mxcc
 cd "$SRC" || exit 1

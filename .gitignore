@@ -7,7 +7,9 @@ build/
 dist/
 
 # 评测证据必须随仓库公开（README 直接引用 artifacts/ 下的报告），不要忽略
-# artifacts/
+# 公开仓库只保留 docs/results/ 下的脱敏摘要；artifacts/ 为本地实验缓存
+/artifacts/
+/csrc_native/artifacts/
 # 只忽略运行期噪声
 artifacts/*.log
 artifacts/*.tmp
@@ -42,3 +44,20 @@ artifacts/*.tmp
 /gate1/gate1b
 /gate1/gate1c
 /gate1/vendor_*.bin
+
+# 原始 Gate 4 证据、远程日志和压缩包保留在本地申报工作区，不入公开仓库
+/docs/gate4/evidence/
+
+# 内部交接、申报草稿和工作计划保留在上层工作空间
+/docs/handover/
+
+# Historical top-level status reports are kept locally; current public status is
+# README + CHANGELOG + PROGRESS + docs/results/c500-2026-10-13.md
+/C500_VALIDATION_REPORT_20261006.md
+/SUBMISSION_STATUS.md
+/V1.1_EVIDENCE_STATUS.md
+
+# Rented-instance model download/staging helpers are operational notes, not
+# portable release scripts.
+/scripts/ms_install.sh
+/scripts/stage_models.sh

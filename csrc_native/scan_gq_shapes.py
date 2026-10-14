@@ -9,7 +9,8 @@ full-attention layer we can identify.
 """
 import json, os, glob
 
-ROOTS = ["/mnt/moark-models", "/data/models"]
+ROOTS = [p for p in os.environ.get(
+    "MXFLASHATTN_MODEL_ROOTS", "/mnt/moark-models:/data/models").split(":") if p]
 
 rows = []
 for root in ROOTS:
