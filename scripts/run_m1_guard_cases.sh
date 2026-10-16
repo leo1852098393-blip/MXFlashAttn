@@ -9,10 +9,11 @@ cd "$ROOT/csrc_native"
 export MACA_PATH="${MACA_PATH:-/opt/maca}"
 export LD_LIBRARY_PATH="/opt/conda/lib:${LD_LIBRARY_PATH:-}"
 export PYTHONPATH="$ROOT"
+PY="${PYTHON:-/opt/conda/bin/python}"
 
 for tag in gq3 gq5 gq6 gq7; do
   echo "=== M1 guard case: ${tag} ==="
-  if python test_m1.py "$tag"; then
+  if "$PY" test_m1.py "$tag"; then
     echo "UNEXPECTED_PASS ${tag}"
   else
     echo "EXPECTED_GUARD_REJECTION ${tag}"
