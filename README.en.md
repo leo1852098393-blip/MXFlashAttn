@@ -1,10 +1,9 @@
 # MXFlashAttn
 
-> **Status (2026-10-16): v1.4.0-dev development line, based on the frozen v1.3.0
-> release candidate.** The in-house split-KV decode kernel (M1) in v1.3.0 has
-> completed real vLLM 0.17.0 generation, dispatch, and fallback validation on a
-> 64 GiB MetaX C500. This branch is for subsequent prefill, dispatch, and
-> validation work; those capabilities are not claimed as complete here.
+> **Status (2026-10-17): v1.4.0 C500 release candidate.** Operator tests, real
+> vLLM 0.17.0 generation, dispatch, fallback, and near-16K long-context
+> regression have completed on C500. Production acceleration remains limited to
+> the M1 split-KV decode path; no production prefill speedup is claimed.
 >
 > **Scope:** a C500-specific MXMACA adapter and decode optimization project,
 > not a cross-platform FlashAttention replacement or an MXAttention/MXFP4 reproduction.
@@ -12,14 +11,13 @@
 [中文说明](README.md) · **English**
 
 MXFlashAttn is a FlashAttention-compatible forward operator and inference adapter for
-**MXMACA / MetaX C500**. v1.3.0 ships an **in-house device kernel**
-(`csrc_native/m1_kernel.cpp`, split-KV paged decode). In the 2026-10-13 retest,
-Qwen3-4B reached about **3.59x** the throughput of this project's own v7 path at
-batch=32 and max_tokens=1024. Gains depend on the model, batch, and KV length;
-short or low-concurrency workloads are not guaranteed to improve. v1.4.0-dev is
-an isolated development line and does not widen the v1.3.0 support claims.
+**MXMACA / MetaX C500**. v1.4.0 ships the validated **in-house device kernel**
+(`csrc_native/m1_kernel.cpp`, split-KV paged decode). In the 2026-10-17 retest,
+Qwen3-4B reached about **3.66x** and Qwen3-8B about **1.37x** versus this
+project's own v7 path in the listed workloads. Gains depend on the model, batch,
+and KV length; short or low-concurrency workloads are not guaranteed to improve.
 
-## 2026-10-13 retest (primary application wording)
+## 2026-10-13 retest (primary application wording and historical comparison)
 
 Environment: MetaX C500 64 GiB, MACA 3.5.3.20, driver 3.8.30, PyTorch
 `2.8.0+metax3.5.3.9`, and vLLM 0.17.0. Every M1 result below has
@@ -34,8 +32,14 @@ Environment: MetaX C500 64 GiB, MACA 3.5.3.20, driver 3.8.30, PyTorch
 
 These numbers apply only to the listed C500 configurations and must not be
 generalized into a fixed speedup for every model or request shape. The Qwen3-4B
-long-context run peaked at about 59.6 GiB. This round did not produce a unified
-TTFT/P95 evaluation.
+long-context run peaked at about 59.6 GiB.
+
+The latest C500 retest recorded Qwen3-4B at 357.76 vs 1309.15 tok/s
+(about 3.66x) and Qwen3-8B at 508.48 vs 695.45 tok/s (about 1.37x) in the
+listed workloads. A real Qwen3-4B run with a 15,000-token prompt and
+`max_model_len=16384` also completed vendor prefill plus M1 decode successfully.
+The streaming TTFT/P95 collection path was verified, but the candidate record
+had zero M1 dispatch events, so it is not presented as M1 TTFT acceleration.
 
 The broader 2026-10-07 Gate 4 matrix, including historical 3.67x and 6.48x
 results, is retained as development provenance and is not mixed with this retest:

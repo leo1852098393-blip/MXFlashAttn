@@ -2,7 +2,7 @@
 
 ## 当前稳定接口
 
-以下接口来自 v1.3.0 基线，v1.4.0-dev 不改变它们的默认行为：
+以下接口来自 v1.3.0 基线，v1.4.0 不改变它们的默认行为：
 
 - `flash_attn_func(q, k, v, ...)`
 - `flash_attn_varlen_func(q, k, v, cu_seqlens_q, cu_seqlens_k, ...)`
@@ -13,7 +13,7 @@
 `GQ in {2, 4, 8}` 和 `head_dim in {64, 128}`；不满足边界的 vLLM 路径必须回退，
 公共 API 仍会明确拒绝不支持形状。
 
-## v1.4 开发接口
+## v1.4 研究接口
 
 ### `prefill_chunked_reference`
 
@@ -32,7 +32,7 @@ output = prefill_chunked_reference(
 ```
 
 它使用在线 softmax 累积跨 KV chunk 的结果。当前实现用于本地参考测试，
-不接入 runtime dispatcher，也不代表 C500 性能 kernel。
+不接入 runtime dispatcher，也不代表 C500 生产性能 kernel。
 
 ### `AdaptiveDispatchPolicy`
 

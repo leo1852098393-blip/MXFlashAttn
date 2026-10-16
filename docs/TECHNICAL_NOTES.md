@@ -1,5 +1,14 @@
 # v1.4 技术说明
 
+## 当前发布边界
+
+v1.4.0 的生产验证重点是 MetaX C500、MACA 3.5.3.20、PyTorch
+`2.8.0+metax3.5.3.9` 和 vLLM 0.17.0 下的 M1 Split-KV Decode。
+`prefill_chunked_reference` 仍是 correctness-first 研究原型，不接入生产
+runtime dispatcher；流式 TTFT/P95 harness 已可采集数据，但 candidate 未命中
+M1 dispatch，因此不作为 M1 TTFT 性能证据。vLLM 0.30.x、FP8、多卡和 SGLang
+仍未验证。
+
 ## Prefill 原型
 
 Prefill 原型把 KV 序列按 `chunk_size` 分段。每个 chunk 计算 attention

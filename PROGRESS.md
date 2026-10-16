@@ -1,4 +1,4 @@
-# MXFlashAttn v1.4.0-dev Progress
+# MXFlashAttn v1.4.0 Progress
 
 更新时间：2026-10-17
 
@@ -6,7 +6,7 @@
 
 - 本开发线从已冻结的 `v1.3.0` public candidate 创建。
 - v1.3.0 的 M1 split-KV decode 能力、C500/vLLM 0.17.0 证据和回退边界保持不变。
-- v1.4.0-dev 已完成本轮新实例上的 C500 验证，但尚未宣称 Prefill 生产加速、
+- v1.4.0 已完成本轮新实例上的 C500 验证，但尚未宣称 Prefill 生产加速、
   自适应阈值、vLLM 0.30、FP8、多卡或 SGLang 支持。
 - C500 原始证据保存在上层工作区 `02_evidence/`，不随公开代码提交。
 
@@ -18,7 +18,7 @@
 - ✅ 已完成长上下文误差摘要、候选调度策略和 vLLM 版本兼容分类
 - ✅ 已固定 C500 实验矩阵并生成 manifest
 - ✅ 已在约 63.6 GiB 显存的 C500 实例上完成环境部署、扩展编译和回归
-- ✅ C500 完整测试通过：`78 passed`
+- ✅ C500 完整测试通过：`79 passed`
 - ✅ 已完成真实 vLLM 0.17.0 生成验证：Qwen3-4B、Qwen3-8B
 - ✅ 已完成 M1 的 BF16、8192 上下文、overflow 和不支持 GQA guard 验证
 - ✅ 已完成 Qwen3.5-9B `head_dim=256` 的 fallback/guard 验证
@@ -40,7 +40,7 @@
 - 详细结果：`docs/C500_V14_VALIDATION_20261017.md`
 - vLLM 兼容：0.17.0 已验证；0.30.x 仍为 `probe_required`
 
-## v1.3.0 基线结果
+## v1.3.0 基线结果（历史对照）
 
 - Qwen3-4B batch=32、1024 token：相对 v7 为约 3.59x。
 - Qwen3-8B batch=16、256 token：约 1.40x。
@@ -70,7 +70,7 @@ candidate 尚未复用已验证的同步 M1 adapter，因此不能把该流式 c
 
 ## 当前收口判断
 
-v1.4.0 当前可作为完成 C500 验证的开发候选版本继续整理申报材料。核心 M1
+v1.4.0 当前可作为完成 C500 验证的发布候选版本继续整理申报材料。核心 M1
 Split-KV decode 已在真实 Qwen3-4B/8B vLLM 生成链路复现；Prefill prototype
 仅作为 correctness-first 研究原型保留，不接入生产 dispatch。PyPI 发布继续等
 版本范围、文档和发布策略最终确认后再决定。

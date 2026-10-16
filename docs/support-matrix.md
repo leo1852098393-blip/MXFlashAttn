@@ -1,7 +1,8 @@
 # Support Matrix
 
-This v1.3.0 local candidate records the C500 validation completed on 2026-10-13,
-with the 2026-10-07 Gate 4 material retained as historical provenance.
+This v1.4.0 C500 release candidate records validation completed through 2026-10-17,
+with the 2026-10-07 Gate 4 and 2026-10-13 retest material retained as historical
+provenance and application evidence.
 The in-repository `csrc/mxmac` extension remains an ATen bring-up/correctness path;
 the in-house device kernel is `csrc_native/m1_kernel.cpp`.
 
@@ -20,7 +21,8 @@ the in-house device kernel is `csrc_native/m1_kernel.cpp`.
 | vLLM prefill | Delegated to MetaX vendor | E2E report |
 | M1 vs v7 E2E | Qwen3-4B/8B, PaddleOCR-VL, TinyLlama and 0.6B | `docs/gate4/E2E_大模型与守卫验证.md` |
 | Torch SDPA baseline | Included in same-input operator matrix | `fair-matrix-c500.json` |
-| TTFT/P95 | Not completed as a unified C500 measurement | 2026-10-13 report |
+| TTFT/P95 | Streaming harness verified; candidate had zero M1 dispatch events, so no M1 performance claim | `02_evidence/.../streaming/` |
+| Near-16K real prompt | Qwen3-4B, 15,000 prompt tokens, `max_model_len=16384`; vendor prefill + M1 decode succeeded | `docs/C500_V14_VALIDATION_20261017.md` |
 | Backward | Unsupported | Explicit validation error |
 | FP8 | Unsupported in this candidate | Future milestone |
 | Multi-card | Unsupported in this candidate | Future milestone |
@@ -37,8 +39,10 @@ lower than the project's PyTorch reference and 32.74% higher than the MetaX
 vendor median. The first number is a reference comparison; the second means
 that no vendor-speedup claim is made. Model-level vLLM tokens/s are reported in
 a separate section because they do not share the operator matrix's inputs. The
-primary 2026-10-13 result is Qwen3-4B batch=32, 1024-token decode at about
-3.59x versus the project's v7 path.
+primary 2026-10-13 historical result is Qwen3-4B batch=32, 1024-token decode
+at about 3.59x versus the project's v7 path. The latest 2026-10-17 retest
+recorded about 3.66x for Qwen3-4B and 1.37x for Qwen3-8B in the listed
+workloads; these remain workload-specific C500 measurements.
 
 ## Fallback
 
