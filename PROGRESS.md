@@ -9,6 +9,13 @@
 - v1.4.0-dev 尚未宣称 Prefill 优化、自适应阈值、vLLM 0.30、FP8 或多卡支持。
 - 新功能先在本地完成正确性原型和测试，再安排一次有明确矩阵的 C500 验证。
 
+## 第一阶段进度
+
+- ✅ 已完成 Prefill correctness-first 原型：`mxflashattn.prefill`
+- ✅ 已覆盖 GQA、causal、短 chunk、FP16/BF16 和非法参数测试
+- ✅ 原型暂不接入 runtime dispatcher，不改变 v1.3.0 基线行为
+- ⏳ 尚未进行 C500 性能测试，也未宣称 Prefill 加速
+
 ## v1.3.0 基线结果
 
 - Qwen3-4B batch=32、1024 token：相对 v7 为约 3.59x。

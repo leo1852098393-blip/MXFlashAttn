@@ -6,6 +6,7 @@ from .dispatch import (
     DispatchInfo,
     get_last_dispatch_info,
 )
+from .prefill import prefill_chunked_reference, prefill_chunked_reference_fallback
 
 __all__ = [
     "BackendUnavailableError",
@@ -14,6 +15,8 @@ __all__ = [
     "flash_attn_varlen_func",
     "flash_attn_with_kvcache",
     "get_last_dispatch_info",
+    "prefill_chunked_reference",
+    "prefill_chunked_reference_fallback",
 ]
 
 __version__ = "1.4.0.dev0"

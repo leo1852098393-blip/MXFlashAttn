@@ -13,6 +13,11 @@ threshold calibration, vLLM 0.30 compatibility, FP8 support, or multi-card suppo
 - Prepare a minimal C500 experiment matrix for prefill, TTFT/P95, and threshold calibration.
 - Evaluate vLLM version compatibility only against a real target environment.
 
+### Completed in this development snapshot
+- Added `prefill_chunked_reference`, a correctness-first online-softmax prototype.
+- Added local tests for GQA, causal masking, short chunks, mixed input dtypes, and invalid chunk sizes.
+- Kept the prototype outside the runtime dispatcher; no production performance claim is made.
+
 ## v1.3.0 (2026-10-13 local candidate) - M1 paged-KV decode kernel
 
 > 2026-10-07 的 Gate 4 数字（包括 3.67x、6.48x）保留为历史开发证据；
