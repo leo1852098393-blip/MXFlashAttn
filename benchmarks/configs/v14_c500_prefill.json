@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "plan_id": "v1.4.0-c500-prefill-thresholds",
+  "description": "Minimal C500 plan for prefill prototype, TTFT/P95, long-context accuracy, and candidate threshold calibration.",
+  "baseline_backends": [
+    "metax_vendor",
+    "v7",
+    "m1_prefill_chunked"
+  ],
+  "models": [
+    {
+      "name": "Qwen3-4B",
+      "gqa_ratio": 4,
+      "head_dim": 128,
+      "required": true,
+      "cases": [
+        {"case_id": "q4b-b1-s256", "batch_size": 1, "prefill_len": 256, "decode_len": 64},
+        {"case_id": "q4b-b4-s512", "batch_size": 4, "prefill_len": 512, "decode_len": 64},
+        {"case_id": "q4b-b16-s1024", "batch_size": 16, "prefill_len": 1024, "decode_len": 128},
+        {"case_id": "q4b-b32-s4096", "batch_size": 32, "prefill_len": 4096, "decode_len": 128},
+        {"case_id": "q4b-b16-s16384", "batch_size": 16, "prefill_len": 16384, "decode_len": 32}
+      ]
+    },
+    {
+      "name": "Qwen3-8B",
+      "gqa_ratio": 4,
+      "head_dim": 128,
+      "required": true,
+      "cases": [
+        {"case_id": "q8b-b1-s256", "batch_size": 1, "prefill_len": 256, "decode_len": 64},
+        {"case_id": "q8b-b16-s1024", "batch_size": 16, "prefill_len": 1024, "decode_len": 128}
+      ]
+    },
+    {
+      "name": "GQ8-HD64-model",
+      "gqa_ratio": 8,
+      "head_dim": 64,
+      "required": true,
+      "cases": [
+        {"case_id": "gq8-b4-s512", "batch_size": 4, "prefill_len": 512, "decode_len": 64},
+        {"case_id": "gq8-b16-s1024", "batch_size": 16, "prefill_len": 1024, "decode_len": 128}
+      ]
+    }
+  ],
+  "guard_cases": [
+    {
+      "case_id": "guard-gq7",
+      "name": "GQ7-model",
+      "gqa_ratio": 7,
+      "head_dim": 128,
+      "batch_size": 16,
+      "prefill_len": 1024,
+      "decode_len": 32,
+      "expected_m1_dispatch": 0,
+      "expected_route": "v7_or_vendor_fallback"
+    },
+    {
+      "case_id": "guard-hd256",
+      "name": "HD256-model",
+      "gqa_ratio": 4,
+      "head_dim": 256,
+      "batch_size": 16,
+      "prefill_len": 1024,
+      "decode_len": 32,
+      "expected_m1_dispatch": 0,
+      "expected_route": "vendor_fallback"
+    }
+  ],
+  "required_metrics": [
+    "prefill_latency_ms_median",
+    "prefill_latency_ms_p95",
+    "ttft_ms_median",
+    "ttft_ms_p95",
+    "decode_tokens_per_second",
+    "peak_memory_gib",
+    "max_abs_error",
+    "p99_abs_error",
+    "text_match",
+    "m1_split_decode_events",
+    "fallback_events"
+  ],
+  "required_metadata": [
+    "timestamp_utc",
+    "git_commit",
+    "model_path",
+    "device_name",
+    "device_memory_gib",
+    "maca_version",
+    "driver_version",
+    "torch_version",
+    "vllm_version",
+    "flash_attn_version",
+    "command",
+    "seed",
+    "warmup_count",
+    "measurement_count"
+  ]
+}

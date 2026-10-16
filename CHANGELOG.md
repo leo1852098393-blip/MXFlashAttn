@@ -17,6 +17,9 @@ threshold calibration, vLLM 0.30 compatibility, FP8 support, or multi-card suppo
 - Added `prefill_chunked_reference`, a correctness-first online-softmax prototype.
 - Added local tests for GQA, causal masking, short chunks, mixed input dtypes, and invalid chunk sizes.
 - Kept the prototype outside the runtime dispatcher; no production performance claim is made.
+- Added long-context error summaries, safe-by-default adaptive policy, and vLLM version classification.
+- Added a fixed C500 v1.4 experiment plan, JSON case matrix, and manifest generator.
+- Added API and technical notes documenting the development-only contracts.
 
 ## v1.3.0 (2026-10-13 local candidate) - M1 paged-KV decode kernel
 

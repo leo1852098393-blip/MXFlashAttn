@@ -1,6 +1,6 @@
 # MXFlashAttn v1.4.0-dev Progress
 
-更新时间：2026-10-16
+更新时间：2026-10-17
 
 ## 当前状态
 
@@ -14,7 +14,17 @@
 - ✅ 已完成 Prefill correctness-first 原型：`mxflashattn.prefill`
 - ✅ 已覆盖 GQA、causal、短 chunk、FP16/BF16 和非法参数测试
 - ✅ 原型暂不接入 runtime dispatcher，不改变 v1.3.0 基线行为
+- ✅ 已完成长上下文误差摘要、候选调度策略和 vLLM 版本兼容分类
+- ✅ 已固定 C500 实验矩阵并生成待填写 manifest
 - ⏳ 尚未进行 C500 性能测试，也未宣称 Prefill 加速
+
+## 租 C500 前准备状态
+
+- 计划：`benchmarks/configs/v14_c500_prefill.json`
+- 实验说明：`docs/C500_V14_EXPERIMENT_PLAN.md`
+- 清单生成：`scripts/prepare_c500_v14.py`
+- 结果字段：Prefill/TTFT/P95、Decode 吞吐、峰值显存、误差分布、dispatch/fallback
+- vLLM 兼容：0.17.0 已验证；0.30.x 仅 probe_required
 
 ## v1.3.0 基线结果
 
