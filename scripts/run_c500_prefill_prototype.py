@@ -65,7 +65,9 @@ def _stats(values: list[float]) -> dict[str, float]:
 
 
 def _vendor_prefill(q, k, v, *, causal: bool):
-    from vllm_metax.v1.attention.backends.fa_utils import flash_attn_func
+    # The MetaX vLLM helper intentionally exposes only varlen/KV-cache
+    # wrappers. The dense prefill primitive is provided by the vendor wheel.
+    from flash_attn import flash_attn_func
 
     return flash_attn_func(q=q, k=k, v=v, causal=causal)
 
