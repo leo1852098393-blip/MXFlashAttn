@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v1.4.1 (2026-10-17) - PyPI packaging revision
+
+- Added a dedicated PyPI landing page focused on installation, API usage, C500
+  setup, verified capabilities, and explicit support boundaries.
+- Kept runtime and C500 kernel behavior unchanged from v1.4.0.
+
 ## v1.4.0 (2026-10-17) - C500 release candidate
 
 This release candidate closes the v1.4 C500 validation cycle. It is validated

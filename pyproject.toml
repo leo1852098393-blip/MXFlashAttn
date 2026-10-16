@@ -4,9 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "mxflashattn"
-version = "1.4.0"
+version = "1.4.1"
 description = "FlashAttention-compatible forward APIs and MXMACA bring-up backend"
-readme = "README.md"
+readme = "README_PYPI.md"
 requires-python = ">=3.10"
 license = "Apache-2.0"
 dependencies = [
