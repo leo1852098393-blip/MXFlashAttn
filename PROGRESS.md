@@ -6,8 +6,9 @@
 
 - 本开发线从已冻结的 `v1.3.0` public candidate 创建。
 - v1.3.0 的 M1 split-KV decode 能力、C500/vLLM 0.17.0 证据和回退边界保持不变。
-- v1.4.0-dev 尚未宣称 Prefill 优化、自适应阈值、vLLM 0.30、FP8 或多卡支持。
-- 新功能先在本地完成正确性原型和测试，再安排一次有明确矩阵的 C500 验证。
+- v1.4.0-dev 已完成本轮新实例上的 C500 验证，但尚未宣称 Prefill 生产加速、
+  自适应阈值、vLLM 0.30、FP8、多卡或 SGLang 支持。
+- C500 原始证据保存在上层工作区 `02_evidence/`，不随公开代码提交。
 
 ## 第一阶段进度
 
@@ -15,16 +16,27 @@
 - ✅ 已覆盖 GQA、causal、短 chunk、FP16/BF16 和非法参数测试
 - ✅ 原型暂不接入 runtime dispatcher，不改变 v1.3.0 基线行为
 - ✅ 已完成长上下文误差摘要、候选调度策略和 vLLM 版本兼容分类
-- ✅ 已固定 C500 实验矩阵并生成待填写 manifest
-- ⏳ 尚未进行 C500 性能测试，也未宣称 Prefill 加速
+- ✅ 已固定 C500 实验矩阵并生成 manifest
+- ✅ 已在约 63.6 GiB 显存的 C500 实例上完成环境部署、扩展编译和回归
+- ✅ C500 完整测试通过：`78 passed`
+- ✅ 已完成真实 vLLM 0.17.0 生成验证：Qwen3-4B、Qwen3-8B
+- ✅ 已完成 M1 的 BF16、8192 上下文、overflow 和不支持 GQA guard 验证
+- ✅ 已完成 Qwen3.5-9B `head_dim=256` 的 fallback/guard 验证
+- ✅ Prefill prototype 已完成正确性和性能定位
+- ⏳ Prefill prototype 未进入默认 dispatch，也未宣称 Prefill 加速
 
-## 租 C500 前准备状态
+## C500 本轮验证结果
 
 - 计划：`benchmarks/configs/v14_c500_prefill.json`
 - 实验说明：`docs/C500_V14_EXPERIMENT_PLAN.md`
 - 清单生成：`scripts/prepare_c500_v14.py`
-- 结果字段：Prefill/TTFT/P95、Decode 吞吐、峰值显存、误差分布、dispatch/fallback
-- vLLM 兼容：0.17.0 已验证；0.30.x 仅 probe_required
+- 新实例环境：MACA `3.5.3.20`、MetaX PyTorch `2.8.0+metax3.5.3.9`、
+  `flash-attn 2.6.3+metax3.5.3.9torch2.8`、vLLM `0.17.0`
+- Qwen3-4B batch=32、生成 1024 token：M1-UM2 相对 v7 约 `3.66x`
+- Qwen3-8B batch=16、生成 256 token：M1-UM2 相对 v7 约 `1.37x`
+- Prefill prototype 正确，但比 vendor 慢约 `8.2x`--`32.3x`
+- 详细结果：`docs/C500_V14_VALIDATION_20261017.md`
+- vLLM 兼容：0.17.0 已验证；0.30.x 仍为 `probe_required`
 
 ## v1.3.0 基线结果
 
@@ -40,8 +52,16 @@
 - `02_evidence/model_benchmarks/E2E_SUMMARY.md`：本地整理的 30 条 E2E 记录分类。
 - `02_evidence/model_benchmarks/EVIDENCE_INDEX.json`：机器可读索引。
 
-## v1.4.0-dev 当前不承诺
+## 尚未完成或暂不承诺
 
-TTFT/P95、backward、FP8、多卡和 SGLang 尚未验证；短序列低并发可能无收益或略慢。
-当前证据没有形成统一的 TTFT/P95 结论。阈值调度仍需在 C500 上校准，当前本地策略
-只负责候选形状判断和安全回退。
+严格 TTFT/P95、backward、FP8、多卡、SGLang、vLLM 0.30.x 兼容性尚未验证；
+短序列低并发可能无收益或略慢。当前 vLLM 离线接口没有提供首 token 和完成时间戳，
+因此本轮只归档 wall latency、吞吐、显存和 dispatch 结果，不能写成严格 TTFT/P95
+结论。严格 token-level 长尾一致性也仍需独立的流式 harness 和更大样本验证。
+
+## 当前收口判断
+
+v1.4.0 当前可作为完成 C500 验证的开发候选版本继续整理申报材料。核心 M1
+Split-KV decode 已在真实 Qwen3-4B/8B vLLM 生成链路复现；Prefill prototype
+仅作为 correctness-first 研究原型保留，不接入生产 dispatch。PyPI 发布继续等
+版本范围、文档和发布策略最终确认后再决定。
