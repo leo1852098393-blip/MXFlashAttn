@@ -64,6 +64,15 @@ def _stats(values: list[float]) -> dict[str, float]:
     }
 
 
+def _p99_abs_error(diff: torch.Tensor) -> tuple[float, bool]:
+    flattened = diff.flatten()
+    if flattened.numel() > 1_000_000:
+        step = math.ceil(flattened.numel() / 1_000_000)
+        flattened = flattened[::step]
+        return float(torch.quantile(flattened, 0.99).item()), True
+    return float(torch.quantile(flattened, 0.99).item()), False
+
+
 def _vendor_prefill(q, k, v, *, causal: bool):
     # The MetaX vLLM helper intentionally exposes only varlen/KV-cache
     # wrappers. The dense prefill primitive is provided by the vendor wheel.
@@ -121,6 +130,7 @@ def main() -> None:
         prototype_out = prototype()
         torch.cuda.synchronize()
         diff = (prototype_out.float() - reference_out.float()).abs()
+        p99_abs_error, p99_sampled = _p99_abs_error(diff)
         vendor_times = _timed(vendor, warmup=args.warmup, iters=args.iters)
         prototype_times = _timed(prototype, warmup=args.warmup, iters=args.iters)
         rows.append(
@@ -137,7 +147,8 @@ def main() -> None:
                     statistics.median(prototype_times) / statistics.median(vendor_times)
                 ),
                 "max_abs_error": float(diff.max().item()),
-                "p99_abs_error": float(torch.quantile(diff.flatten(), 0.99).item()),
+                "p99_abs_error": p99_abs_error,
+                "p99_abs_error_sampled": p99_sampled,
                 "peak_memory_gib": torch.cuda.max_memory_allocated() / (1024**3),
             }
         )
