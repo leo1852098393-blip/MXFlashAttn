@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## v1.4.0-dev (2026-10-16) - development line
+
+This branch is based on the frozen `v1.3.0` public candidate. It is reserved for
+follow-up engineering and does not claim completed prefill optimization, adaptive
+threshold calibration, vLLM 0.30 compatibility, FP8 support, or multi-card support.
+
+### Planned work
+- Build a correctness-first prefill prototype and local reference tests.
+- Define an adaptive dispatch interface without enabling uncalibrated thresholds by default.
+- Add long-context accuracy and error-distribution test harnesses.
+- Prepare a minimal C500 experiment matrix for prefill, TTFT/P95, and threshold calibration.
+- Evaluate vLLM version compatibility only against a real target environment.
+
 ## v1.3.0 (2026-10-13 local candidate) - M1 paged-KV decode kernel
 
 > 2026-10-07 的 Gate 4 数字（包括 3.67x、6.48x）保留为历史开发证据；

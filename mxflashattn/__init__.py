@@ -16,4 +16,4 @@ __all__ = [
     "get_last_dispatch_info",
 ]
 
-__version__ = "1.3.0"
+__version__ = "1.4.0.dev0"

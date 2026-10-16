@@ -1,8 +1,10 @@
 # MXFlashAttn
 
-> **Status (2026-10-13): v1.3.0 local release candidate. The in-house split-KV
-> decode kernel (M1) has completed real vLLM 0.17.0 generation, dispatch, and
-> fallback validation on a 64 GiB MetaX C500.**
+> **Status (2026-10-16): v1.4.0-dev development line, based on the frozen v1.3.0
+> release candidate.** The in-house split-KV decode kernel (M1) in v1.3.0 has
+> completed real vLLM 0.17.0 generation, dispatch, and fallback validation on a
+> 64 GiB MetaX C500. This branch is for subsequent prefill, dispatch, and
+> validation work; those capabilities are not claimed as complete here.
 >
 > **Scope:** a C500-specific MXMACA adapter and decode optimization project,
 > not a cross-platform FlashAttention replacement or an MXAttention/MXFP4 reproduction.
@@ -14,7 +16,8 @@ MXFlashAttn is a FlashAttention-compatible forward operator and inference adapte
 (`csrc_native/m1_kernel.cpp`, split-KV paged decode). In the 2026-10-13 retest,
 Qwen3-4B reached about **3.59x** the throughput of this project's own v7 path at
 batch=32 and max_tokens=1024. Gains depend on the model, batch, and KV length;
-short or low-concurrency workloads are not guaranteed to improve.
+short or low-concurrency workloads are not guaranteed to improve. v1.4.0-dev is
+an isolated development line and does not widen the v1.3.0 support claims.
 
 ## 2026-10-13 retest (primary application wording)
 

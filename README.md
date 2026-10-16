@@ -1,7 +1,9 @@
 # MXFlashAttn
 
-> **状态（2026-10-13）：v1.3.0 本地发布候选。自研 split-KV decode 内核 M1 已在
-> MetaX C500 64G 上完成真实 vLLM 0.17.0 生成、dispatch 和回退验证。**
+> **状态（2026-10-16）：v1.4.0-dev 开发线，基于已冻结的 v1.3.0 发布候选。**
+> v1.3.0 的自研 split-KV decode 内核 M1 已在 MetaX C500 64G 上完成真实
+> vLLM 0.17.0 生成、dispatch 和回退验证；本分支用于后续 Prefill、调度和验证工作，
+> 尚不代表这些后续能力已经完成。
 >
 > **项目边界：**这是面向 MXMACA/MetaX C500 的专项适配与 decode 优化工程，
 > 不是跨硬件 FlashAttention 替代品，也不是 MXAttention（MXFP4）复现。
@@ -10,6 +12,7 @@
 
 MXFlashAttn 是面向 **MXMACA / MetaX C500** 的 FlashAttention 兼容前向算子与推理适配项目。
 v1.3.0 起包含**自研 device kernel**（`csrc_native/m1_kernel.cpp`，split-KV paged decode）。
+v1.4.0-dev 是独立开发线，不改变 v1.3.0 已验证的能力边界。
 2026-10-13 的 64G C500 复测中，Qwen3-4B 在 batch=32、max_tokens=1024 的长上下文
 decode 场景相对本项目 v7 路径达到约 **3.59×** 吞吐；跨模型结果表明收益依赖模型、
 batch 和 KV 长度，短序列或低并发不保证加速。
