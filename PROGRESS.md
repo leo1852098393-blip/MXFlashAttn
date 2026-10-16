@@ -24,6 +24,8 @@
 - ✅ 已完成 Qwen3.5-9B `head_dim=256` 的 fallback/guard 验证
 - ✅ Prefill prototype 已完成正确性和性能定位
 - ⏳ Prefill prototype 未进入默认 dispatch，也未宣称 Prefill 加速
+- ✅ official split 的 `invalid argument` 窄化 vendor 回退保护已实现，并加入单元回归测试
+- ✅ 真实 15K prompt / max_model_len=16384 已在 C500 完成 vendor prefill + M1 decode 回归
 
 ## C500 本轮验证结果
 
@@ -54,10 +56,17 @@
 
 ## 尚未完成或暂不承诺
 
-严格 TTFT/P95、backward、FP8、多卡、SGLang、vLLM 0.30.x 兼容性尚未验证；
+严格 token-level 长尾一致性、backward、FP8、多卡、SGLang、vLLM 0.30.x
+兼容性尚未验证；流式 TTFT/P95 采集链路已在 C500 打通，但 AsyncLLMEngine
+candidate 尚未复用已验证的同步 M1 adapter，因此不能把该流式 candidate 数字
+写成 M1 TTFT/P95 提升；
+此前 16K official split wrapper 真实 prefill 触发过 `invalid argument`，当前代码已
+加入窄化 vendor 重试保护；新实例 15K prompt 回归未复现该错误，且 M1 decode
+真实命中；
 短序列低并发可能无收益或略慢。当前 vLLM 离线接口没有提供首 token 和完成时间戳，
-因此本轮只归档 wall latency、吞吐、显存和 dispatch 结果，不能写成严格 TTFT/P95
-结论。严格 token-level 长尾一致性也仍需独立的流式 harness 和更大样本验证。
+此前本轮只归档 wall latency、吞吐、显存和同步 dispatch 结果；流式 baseline
+和 candidate 诊断结果已归档到 `02_evidence/.../streaming/`，严格 token-level
+长尾一致性仍需更大样本验证。
 
 ## 当前收口判断
 
