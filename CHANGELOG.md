@@ -1,5 +1,59 @@
 # CHANGELOG
 
+## v1.4.1 (2026-10-17) - PyPI packaging revision
+
+- Added a dedicated PyPI landing page focused on installation, API usage, C500
+  setup, verified capabilities, and explicit support boundaries.
+- Kept runtime and C500 kernel behavior unchanged from v1.4.0.
+
+## v1.4.0 (2026-10-17) - C500 release candidate
+
+This release candidate closes the v1.4 C500 validation cycle. It is validated
+for MetaX C500 with MACA 3.5.3.20, MetaX PyTorch
+`2.8.0+metax3.5.3.9`, and vLLM 0.17.0.
+
+### Validated
+
+- M1 split-KV decode was reproduced through real Qwen3-4B and Qwen3-8B vLLM
+  generation paths, with dispatch evidence.
+- Latest retest reached about 3.66x versus the project's v7 path for Qwen3-4B
+  and about 1.37x for Qwen3-8B in the listed workloads.
+- A 15,000-token Qwen3-4B prompt with `max_model_len=16384` completed vendor
+  prefill plus M1 decode and generated 32 tokens successfully.
+- Official-split `invalid argument` handling has a narrow vendor-retry guard;
+  the latest long-context regression did not reproduce the earlier failure.
+- The streaming TTFT/P95 harness is available, but the archived candidate
+  record had zero M1 dispatch events and is not an M1 TTFT performance result.
+
+### Explicitly not claimed
+
+- `prefill_chunked_reference` is a correctness-first research prototype and
+  is not connected to the production runtime dispatcher.
+- vLLM 0.30.x, FP8, multi-card execution, and SGLang are not supported claims.
+- The speedups are C500, workload, model, and baseline specific; they are not
+  a general FlashAttention replacement claim.
+
+## v1.4.0-dev (2026-10-16) - development line
+
+This branch is based on the frozen `v1.3.0` public candidate. It is reserved for
+follow-up engineering and does not claim completed prefill optimization, adaptive
+threshold calibration, vLLM 0.30 compatibility, FP8 support, or multi-card support.
+
+### Planned work
+- Build a correctness-first prefill prototype and local reference tests.
+- Define an adaptive dispatch interface without enabling uncalibrated thresholds by default.
+- Add long-context accuracy and error-distribution test harnesses.
+- Prepare a minimal C500 experiment matrix for prefill, TTFT/P95, and threshold calibration.
+- Evaluate vLLM version compatibility only against a real target environment.
+
+### Completed in this development snapshot
+- Added `prefill_chunked_reference`, a correctness-first online-softmax prototype.
+- Added local tests for GQA, causal masking, short chunks, mixed input dtypes, and invalid chunk sizes.
+- Kept the prototype outside the runtime dispatcher; no production performance claim is made.
+- Added long-context error summaries, safe-by-default adaptive policy, and vLLM version classification.
+- Added a fixed C500 v1.4 experiment plan, JSON case matrix, and manifest generator.
+- Added API and technical notes documenting the development-only contracts.
+
 ## v1.3.0 (2026-10-13 local candidate) - M1 paged-KV decode kernel
 
 > 2026-10-07 的 Gate 4 数字（包括 3.67x、6.48x）保留为历史开发证据；

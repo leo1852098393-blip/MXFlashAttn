@@ -1,7 +1,8 @@
 # MXFlashAttn
 
-> **状态（2026-10-13）：v1.3.0 本地发布候选。自研 split-KV decode 内核 M1 已在
-> MetaX C500 64G 上完成真实 vLLM 0.17.0 生成、dispatch 和回退验证。**
+> **状态（2026-10-17）：v1.4.0 C500 发布候选版本。**
+> 已完成 C500 上的算子、真实 vLLM 0.17.0 生成、dispatch、回退和近 16K 长上下文回归；
+> 生产加速范围仍限定为 M1 Split-KV Decode，不宣称 Prefill 生产加速。
 >
 > **项目边界：**这是面向 MXMACA/MetaX C500 的专项适配与 decode 优化工程，
 > 不是跨硬件 FlashAttention 替代品，也不是 MXAttention（MXFP4）复现。
@@ -10,15 +11,16 @@
 
 MXFlashAttn 是面向 **MXMACA / MetaX C500** 的 FlashAttention 兼容前向算子与推理适配项目。
 v1.3.0 起包含**自研 device kernel**（`csrc_native/m1_kernel.cpp`，split-KV paged decode）。
-2026-10-13 的 64G C500 复测中，Qwen3-4B 在 batch=32、max_tokens=1024 的长上下文
-decode 场景相对本项目 v7 路径达到约 **3.59×** 吞吐；跨模型结果表明收益依赖模型、
+v1.4.0 在 v1.3.0 基础上完成了 C500 验证和长上下文回归。2026-10-17 的复测中，
+Qwen3-4B 在 batch=32、max_tokens=1024 的长上下文 decode 场景相对本项目 v7 路径达到约
+**3.66×** 吞吐；Qwen3-8B 在 batch=16、max_tokens=256 时约 **1.37×**。跨模型结果表明收益依赖模型、
 batch 和 KV 长度，短序列或低并发不保证加速。
 
 [![CI](https://github.com/leo1852098393-blip/MXFlashAttn/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/leo1852098393-blip/MXFlashAttn/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%2B-3776AB.svg)](pyproject.toml)
 
-## 2026-10-13 复测结果（申报主口径）
+## 2026-10-13 C500 复测结果（申报主口径/历史对照）
 
 环境：MetaX C500 64G、MACA 3.5.3.20、驱动 3.8.30、PyTorch
 `2.8.0+metax3.5.3.9`、vLLM 0.17.0。所有 M1 结果均由 dispatch 日志确认进入
@@ -31,8 +33,16 @@ batch 和 KV 长度，短序列或低并发不保证加速。
 | Qwen3-8B，batch=16，256 token | 500.79 tok/s | 703.06 tok/s | **1.40×** |
 | PaddleOCR-VL，batch=16，64 token | 281.73 tok/s | 334.71 tok/s | **1.19×** |
 
-这些数字只描述表中 C500 配置，不外推为所有模型或所有请求形态的固定倍率。Qwen3-4B
-长上下文阶段峰值显存约 59.6 GiB；本轮没有完成统一 TTFT/P95 评测。
+本轮最新复测为 Qwen3-4B `v7=357.76`、`M1-UM2=1309.15 tok/s`（约 **3.66×**），
+Qwen3-8B `v7=508.48`、`M1-UM2=695.45 tok/s`（约 **1.37×**）。
+这些数字只描述表中 C500 配置，不外推为所有模型或所有请求形态的固定倍率。
+另已完成 Qwen3-4B 真实 15,000 token prompt、`max_model_len=16384` 的
+vendor prefill + M1 decode 回归，生成 32 token 成功且 M1 dispatch 命中。
+流式 TTFT/P95 采集链路已验证，但 candidate 记录没有 M1 dispatch 事件，
+因此不把它写成 M1 TTFT 性能提升。
+
+2026-10-13 的复测表仍作为申报主口径和历史对照保留在
+[`docs/results/c500-2026-10-13.md`](docs/results/c500-2026-10-13.md)。
 
 2026-10-07 Gate 4 的更大场景矩阵（包括 3.67×、6.48× 等数字）保留在历史报告中，
 用于说明研发过程与形状覆盖，不与本轮复测混成同一组结果：
@@ -81,7 +91,7 @@ python csrc_native/bench_e2e.py --model /path/to/Qwen3-4B --batches 128 64 --max
 | dense / varlen / paged KV cache | API 已实现；paged KV append 已在 C500 验证 |
 | dispatch 后端 | `m1_split_decode`（M1）→ `native_decode`（v7）→ `vendor_direct` → `reference` |
 | PyTorch reference fallback | 需显式设置 `MXFLASHATTN_ALLOW_FALLBACK=1`，不会静默切换 |
-| TTFT | 未测量（vLLM 0.17.0 离线接口未提供时间戳） |
+| TTFT / P95 | 流式采集链路已验证；candidate 未命中 M1，不作为 M1 性能证据 |
 | backward、FP8、多卡 | 首期不支持 |
 | SGLang | 未安装验证 |
 
@@ -197,10 +207,10 @@ python integrations/vllm/smoke_generate.py --model /mnt/moark-models/Qwen3-0.6B 
 
 ## 路线图
 
-1. 把 M1 的 online-softmax 重缩放切到 `llvm.mxc.expadd.f32.i32` 硬件融合路径。
-2. 评估 mode 0（寄存器流水线，理论上限最优）—— 待工具链问题解决后重估。
-3. 用外部计时补充 vLLM 0.17.0 的 TTFT。
-4. 评估 backward、FP8、多卡与 SGLang 能力。
+后续优化与风险收敛路线见 [`docs/V1.5_OPTIMIZATION_PLAN.md`](docs/V1.5_OPTIMIZATION_PLAN.md)。
+其中包括 M1 硬件 intrinsic 评估、C500 Prefill kernel、可复现 TTFT 口径、
+自适应调度、vLLM 新版本兼容性以及 FP8/多卡/SGLang 评估；这些不属于
+v1.4.0 已完成能力。
 
 ## 许可证
 

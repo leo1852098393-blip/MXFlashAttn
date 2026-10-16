@@ -358,17 +358,42 @@ def _forward_official_split_with_mx(self, layer, query, key, value, kv_cache, me
     _official_kvcache = old_kv
     glb["flash_attn_varlen_func"] = _mx_varlen_compat
     glb["flash_attn_with_kvcache"] = _mx_kvcache_compat
+    dispatch_event = {
+        "path": "vendor_direct",
+        "operation": "official_split_mx",
+        "fallback": "false",
+    }
     try:
-        result = super(MXFlashAttnImpl, self).forward(
-            layer, query, key, value, kv_cache, metadata, output,
-            output_scale, output_block_scale
-        )
+        try:
+            result = super(MXFlashAttnImpl, self).forward(
+                layer, query, key, value, kv_cache, metadata, output,
+                output_scale, output_block_scale
+            )
+        except Exception as exc:
+            # MetaX's official split wrapper can reject otherwise valid long
+            # prefill inputs with an accelerator-side "invalid argument".
+            # Retry once with the untouched vendor functions so the project
+            # remains a safe compatibility layer instead of taking down vLLM.
+            if "invalid argument" not in str(exc).lower():
+                raise
+            glb["flash_attn_varlen_func"] = old_var
+            glb["flash_attn_with_kvcache"] = old_kv
+            result = super(MXFlashAttnImpl, self).forward(
+                layer, query, key, value, kv_cache, metadata, output,
+                output_scale, output_block_scale
+            )
+            dispatch_event = {
+                "path": "vendor_direct",
+                "operation": "official_split_invalid_argument_fallback",
+                "fallback": "true",
+                "fallback_reason": "official_split_invalid_argument",
+            }
     finally:
         glb["flash_attn_varlen_func"] = old_var
         glb["flash_attn_with_kvcache"] = old_kv
         _official_varlen = None
         _official_kvcache = None
-    _record_worker_event({"path": "vendor_direct", "operation": "official_split_mx" , "fallback": "false"})
+    _record_worker_event(dispatch_event)
     return result
 
 class MXFlashAttnImpl(FlashAttentionImpl):
